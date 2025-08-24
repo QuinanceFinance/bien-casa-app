@@ -55,5 +55,7 @@
     <string>We need access to your location to show your position on the map and provide accurate address information.</string>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>We need access to your location to show your position on the map and provide accurate address information.</string>
+    <key>io.flutter.embedded_views_preview</key>
+    <true/>
   </dict>
 </plist>

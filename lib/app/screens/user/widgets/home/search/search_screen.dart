@@ -35,9 +35,12 @@ class _SearchScreenState extends State<SearchScreen> {
         title: const Text(
           'Search',
           style: TextStyle(
-            fontFamily: 'ProductSans',
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+            fontFamily: 'Product Sans',
+            fontSize: 24,
+            fontWeight: FontWeight.w400,
+            fontStyle: FontStyle.normal,
+            height: 1.04,
+            letterSpacing: -0.32,
             color: Colors.black,
           ),
         ),
@@ -48,6 +51,7 @@ class _SearchScreenState extends State<SearchScreen> {
           children: [
             // Search input field
             Container(
+              height: 60,
               decoration: BoxDecoration(
                 color: const Color(0xffF8F8F8),
                 borderRadius: BorderRadius.circular(16),
@@ -69,7 +73,8 @@ class _SearchScreenState extends State<SearchScreen> {
                         hintStyle: TextStyle(
                           color: Color(0xffBDBDBD),
                           fontSize: 16,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans',
+                          fontWeight: FontWeight.w300,
                         ),
                         border: InputBorder.none,
                       ),
@@ -84,7 +89,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   if (_searchQuery.isNotEmpty)
                     IconButton(
                       icon: const Icon(
-                        Icons.cancel_outlined,
+                        Icons.clear,
                         color: Colors.black,
                         size: 24,
                       ),
@@ -99,7 +104,7 @@ class _SearchScreenState extends State<SearchScreen> {
               ),
             ),
 
-            const SizedBox(height: 16),
+            const SizedBox(height: 20),
 
             // Search results
             Expanded(
@@ -121,9 +126,13 @@ class _SearchScreenState extends State<SearchScreen> {
         const Text(
           'Popular Searches',
           style: TextStyle(
-            fontFamily: 'ProductSans',
+            fontFamily: 'Product Sans',
             fontSize: 18,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w400,
+            fontStyle: FontStyle.normal,
+            height: 1.04,
+            letterSpacing: -0.32,
+            color: Colors.black,
           ),
         ),
         const SizedBox(height: 16),
@@ -145,9 +154,13 @@ class _SearchScreenState extends State<SearchScreen> {
         const Text(
           'Recent Searches',
           style: TextStyle(
-            fontFamily: 'ProductSans',
+            fontFamily: 'Product Sans',
             fontSize: 18,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w400,
+            fontStyle: FontStyle.normal,
+            height: 1.04,
+            letterSpacing: -0.32,
+            color: Colors.black,
           ),
         ),
         const SizedBox(height: 16),
@@ -174,7 +187,11 @@ class _SearchScreenState extends State<SearchScreen> {
         ),
         child: Text(
           label,
-          style: const TextStyle(fontFamily: 'ProductSans', fontSize: 14),
+          style: const TextStyle(
+            fontFamily: 'Product Sans',
+            fontSize: 12,
+            fontWeight: FontWeight.w400,
+          ),
         ),
       ),
     );
@@ -186,7 +203,11 @@ class _SearchScreenState extends State<SearchScreen> {
       leading: const Icon(Icons.history, color: Colors.grey),
       title: Text(
         search,
-        style: const TextStyle(fontFamily: 'ProductSans', fontSize: 16),
+        style: const TextStyle(
+          fontFamily: 'Product Sans',
+          fontSize: 15,
+          fontWeight: FontWeight.w400,
+        ),
       ),
       trailing: const Icon(Icons.arrow_forward_ios, size: 16),
       onTap: () {
@@ -224,7 +245,7 @@ class _SearchScreenState extends State<SearchScreen> {
       return const Center(
         child: Text(
           'No results found',
-          style: TextStyle(fontFamily: 'ProductSans', fontSize: 16),
+          style: TextStyle(fontFamily: 'Product Sans', fontSize: 16),
         ),
       );
     }
@@ -271,7 +292,7 @@ class _SearchScreenState extends State<SearchScreen> {
           title: Text(
             property['name'] ?? '',
             style: const TextStyle(
-              fontFamily: 'ProductSans',
+              fontFamily: 'Product Sans',
               fontWeight: FontWeight.bold,
               fontSize: 16,
             ),
@@ -282,7 +303,7 @@ class _SearchScreenState extends State<SearchScreen> {
               Text(
                 property['address'] ?? '',
                 style: const TextStyle(
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans',
                   fontSize: 14,
                   color: Colors.grey,
                 ),
@@ -291,7 +312,7 @@ class _SearchScreenState extends State<SearchScreen> {
               Text(
                 '${property['price'] ?? ''} • ${property['size'] ?? ''} • ${property['type'] ?? ''}',
                 style: const TextStyle(
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans',
                   fontSize: 12,
                   color: Colors.grey,
                 ),

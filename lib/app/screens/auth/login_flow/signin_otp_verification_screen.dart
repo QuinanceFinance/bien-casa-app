@@ -36,8 +36,8 @@ class SignInOtpVerificationScreen extends StatelessWidget {
               Text(
                 'Enter\nyour OTP',
                 style: TextStyle(
-                  fontSize: Get.width * 0.10,
-                  fontFamily: 'ProductSans',
+                  fontSize: 40,
+                  fontFamily: 'Product Sans',
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
                   height: 1.2,
@@ -48,8 +48,8 @@ class SignInOtpVerificationScreen extends StatelessWidget {
                 text: TextSpan(
                   text: 'Kindly enter the OTP code sent to your phone ',
                   style: TextStyle(
-                    fontFamily: 'ProductSans',
-                    fontSize: Get.width * 0.04,
+                    fontFamily: 'Product Sans',
+                    fontSize: 15,
                     fontWeight: FontWeight.w300,
                     color: Colors.black,
                   ),
@@ -59,9 +59,10 @@ class SignInOtpVerificationScreen extends StatelessWidget {
                       style: const TextStyle(fontWeight: FontWeight.w300),
                     ),
                     TextSpan(
-                      text: phoneNumber.length >= 3
-                          ? '***${phoneNumber.substring(phoneNumber.length - 3)}'
-                          : phoneNumber,
+                      text:
+                          phoneNumber.length >= 3
+                              ? '***${phoneNumber.substring(phoneNumber.length - 3)}'
+                              : phoneNumber,
                       style: const TextStyle(fontWeight: FontWeight.w600),
                     ),
                     TextSpan(
@@ -132,15 +133,21 @@ class SignInOtpVerificationScreen extends StatelessWidget {
                       Text(
                         'I didn\'t receive a code?',
                         style: TextStyle(
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans Light',
+                          fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.normal,
                           fontSize: 15,
+                          leadingDistribution:
+                              TextLeadingDistribution.proportional,
+                          letterSpacing: 0,
                         ),
                       ),
+                      SizedBox(height: 5),
                       Text(
                         'Resend code',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans',
                           fontSize: 17,
                         ),
                       ),

@@ -8,7 +8,7 @@ import 'package:image_picker/image_picker.dart';
 
 class CheckQualityScreen extends StatefulWidget {
   final XFile image;
-  
+
   const CheckQualityScreen({super.key, required this.image});
 
   @override
@@ -35,7 +35,7 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
     setState(() {
       _showPinchIcon = true;
     });
-    
+
     _pinchIconTimer?.cancel();
     _pinchIconTimer = Timer(Duration(seconds: 5), () {
       if (mounted) {
@@ -48,23 +48,27 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final steps = ['Identity', 'Selfie', 'Address'];
+    final steps = ['Identity doc', 'Selfie', '      Address'];
     final isSmallScreen = Get.height < 600;
 
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_new),
+          onPressed: () => Get.back(),
+        ),
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         elevation: 0,
-        automaticallyImplyLeading: false,
         title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(height: 5),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: List.generate(steps.length, (index) {
                 final isActive = index == 1; // Selfie is active
+                final isCompleted = index == 0; // First step completed
                 return Expanded(
                   child: Text(
                     steps[index],
@@ -72,7 +76,7 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
                     style: TextStyle(
                       color: isActive ? Colors.black : Colors.grey[600],
                       fontSize: 12,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       fontWeight: isActive ? FontWeight.w400 : FontWeight.w300,
                     ),
                   ),
@@ -80,7 +84,7 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
               }),
             ),
             SizedBox(height: 8),
-             Padding(
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -95,7 +99,12 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
                           Expanded(
                             child: Container(
                               height: 1.5,
-                              color: isCompleted ? Colors.black : isActive ? Colors.black : Colors.grey[300]!,
+                              color:
+                                  isCompleted
+                                      ? Colors.black
+                                      : isActive
+                                      ? Colors.black
+                                      : Colors.grey[300]!,
                             ),
                           ),
                         Container(
@@ -105,40 +114,47 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
                             shape: BoxShape.circle,
                             color: Colors.white,
                             border: Border.all(
-                              color: isActive || isCompleted ? Colors.black : Colors.grey[300]!,
+                              color:
+                                  isActive || isCompleted
+                                      ? Colors.black
+                                      : Colors.grey[300]!,
                               width: 1.5,
                             ),
                           ),
-                          child: isActive
-                              ? Center(
-                                  child: Container(
-                                    width: 12,
-                                    height: 12,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.black,
-                                      border: Border.all(
-                                        color: Colors.white,
-                                        width: 1.5,
+                          child:
+                              isActive
+                                  ? Center(
+                                    child: Container(
+                                      width: 12,
+                                      height: 12,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.black,
+                                        border: Border.all(
+                                          color: Colors.white,
+                                          width: 1.5,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                )
-                              : isCompleted
+                                  )
+                                  : isCompleted
                                   ? Center(
-                                      child: Icon(
-                                        Icons.check,
-                                        size: 10,
-                                        color: Colors.black,
-                                      ),
-                                    )
+                                    child: Icon(
+                                      Icons.check,
+                                      size: 10,
+                                      color: Colors.black,
+                                    ),
+                                  )
                                   : null,
                         ),
                         if (index < steps.length - 1)
                           Expanded(
                             child: Container(
                               height: 1.5,
-                              color: isCompleted ? Colors.black : Colors.grey[300]!,
+                              color:
+                                  isCompleted
+                                      ? Colors.black
+                                      : Colors.grey[300]!,
                             ),
                           ),
                       ],
@@ -147,9 +163,10 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
                 }),
               ),
             ),
-           SizedBox(height: 2.5),
+            SizedBox(height: 2.5),
           ],
         ),
+        bottom: null,
       ),
       body: SafeArea(
         child: Padding(
@@ -158,26 +175,30 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Check quality',
+                'Check Quality',
                 style: TextStyle(
-                  fontSize: Get.width * 0.09,
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans',
                   fontWeight: FontWeight.w400,
-                  color: Colors.black,
-                  height: 1.2,
+                  fontStyle: FontStyle.normal,
+                  fontSize: 40,
+                  height: 1,
+                  letterSpacing: 0,
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 14),
               Text(
                 'Make sure the information is seen clearly, with no blur or glare.',
                 style: TextStyle(
-                  fontSize: 16,
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans Light',
                   fontWeight: FontWeight.w300,
-                  color: Colors.black,
+                  color: Color(0xff020202),
+                  fontStyle: FontStyle.normal,
+                  fontSize: 15,
+                  height: 1,
+                  letterSpacing: 0,
                 ),
               ),
-              SizedBox(height: 24),
+              SizedBox(height: 16),
               Expanded(
                 child: Container(
                   width: double.infinity,
@@ -208,25 +229,25 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
                           child: Container(
                             padding: EdgeInsets.all(8),
                             decoration: BoxDecoration(
-                              color: Colors.black.withOpacity(0.6),
+                              color: Color(0xff020202).withOpacity(0.3),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Image.asset(
-                                    'assets/icons/zoom icon.png',
-                                    width: Get.width * 0.1,
-                                    height: Get.width * 0.1,
-                                    color: Colors.white,
-                                  ),
+                                  'assets/icons/zoom icon.png',
+                                  width: Get.width * 0.1,
+                                  height: Get.width * 0.1,
+                                  color: Colors.white,
+                                ),
                                 SizedBox(width: 4),
                                 Text(
                                   'Pinch to zoom',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 12,
-                                    fontFamily: 'ProductSans',
+                                    fontFamily: 'Product Sans',
                                   ),
                                 ),
                               ],
@@ -256,8 +277,11 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
                       child: Text(
                         'Take Again',
                         style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans',
+                          fontWeight: FontWeight.w400,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 22,
+                          letterSpacing: 0,
                         ),
                       ),
                     ),
@@ -281,8 +305,11 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
                       child: Text(
                         'Submit',
                         style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans',
+                          fontWeight: FontWeight.w400,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 22,
+                          letterSpacing: 0,
                         ),
                       ),
                     ),

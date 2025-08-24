@@ -27,16 +27,16 @@ class LocationPropertyCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 200,
+        width: 158,
 
-        margin: const EdgeInsets.only(right: 16, bottom: 10),
+        margin: const EdgeInsets.only(right: 10, bottom: 10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
               blurRadius: 4,
-              color: Color(0x26000000),
+              color: Color(0x26000000).withValues(alpha: 0.1),
               offset: Offset(0, 0),
             ),
           ],
@@ -51,51 +51,56 @@ class LocationPropertyCard extends StatelessWidget {
                   borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(20),
                   ),
-                  child: imageUrl.startsWith('http')
-                    ? Image.network(
-                        imageUrl,
-                        width: double.infinity,
-                        height: 97,
-                        fit: BoxFit.cover,
-                        loadingBuilder: (context, child, loadingProgress) {
-                          if (loadingProgress == null) return child;
-                          return Container(
+                  child:
+                      imageUrl.startsWith('http')
+                          ? Image.network(
+                            imageUrl,
                             width: double.infinity,
                             height: 97,
-                            color: Colors.grey[200],
-                            child: Center(
-                              child: CircularProgressIndicator(
-                                value: loadingProgress.expectedTotalBytes != null
-                                    ? loadingProgress.cumulativeBytesLoaded /
-                                        loadingProgress.expectedTotalBytes!
-                                    : null,
-                              ),
-                            ),
-                          );
-                        },
-                        errorBuilder: (context, error, stackTrace) {
-                          return Container(
+                            fit: BoxFit.cover,
+                            loadingBuilder: (context, child, loadingProgress) {
+                              if (loadingProgress == null) return child;
+                              return Container(
+                                width: double.infinity,
+                                height: 97,
+                                color: Colors.grey[200],
+                                child: Center(
+                                  child: CircularProgressIndicator(
+                                    value:
+                                        loadingProgress.expectedTotalBytes !=
+                                                null
+                                            ? loadingProgress
+                                                    .cumulativeBytesLoaded /
+                                                loadingProgress
+                                                    .expectedTotalBytes!
+                                            : null,
+                                  ),
+                                ),
+                              );
+                            },
+                            errorBuilder: (context, error, stackTrace) {
+                              return Container(
+                                width: double.infinity,
+                                height: 97,
+                                color: Colors.grey[300],
+                                child: const Center(child: Icon(Icons.error)),
+                              );
+                            },
+                          )
+                          : Image.asset(
+                            imageUrl,
                             width: double.infinity,
                             height: 97,
-                            color: Colors.grey[300],
-                            child: const Center(child: Icon(Icons.error)),
-                          );
-                        },
-                      )
-                    : Image.asset(
-                        imageUrl,
-                        width: double.infinity,
-                        height: 97,
-                        fit: BoxFit.cover,
-                        errorBuilder: (context, error, stackTrace) {
-                          return Container(
-                            width: double.infinity,
-                            height: 97,
-                            color: Colors.grey[300],
-                            child: const Center(child: Icon(Icons.error)),
-                          );
-                        },
-                      ),
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) {
+                              return Container(
+                                width: double.infinity,
+                                height: 97,
+                                color: Colors.grey[300],
+                                child: const Center(child: Icon(Icons.error)),
+                              );
+                            },
+                          ),
                 ),
                 Positioned(
                   top: 10,
@@ -120,9 +125,11 @@ class LocationPropertyCard extends StatelessWidget {
                   Text(
                     name,
                     style: const TextStyle(
-                      fontFamily: 'ProductSans',
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Product Sans',
+                      fontWeight: FontWeight.w400,
+                      fontStyle: FontStyle.normal,
                       fontSize: 16,
+                      height: 1,
                     ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
@@ -143,9 +150,12 @@ class LocationPropertyCard extends StatelessWidget {
                         child: Text(
                           address,
                           style: const TextStyle(
-                            fontFamily: 'ProductSans',
-                            color: Colors.black54,
+                            fontFamily: 'Product Sans Light',
+                            fontWeight: FontWeight.w300,
+                            fontStyle: FontStyle.normal,
+                            height: 1,
                             fontSize: 12,
+                            color: Colors.black,
                           ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
@@ -168,8 +178,12 @@ class LocationPropertyCard extends StatelessWidget {
                       Text(
                         '$size - $type',
                         style: const TextStyle(
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans Light',
+                          fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.normal,
+                          height: 1,
                           fontSize: 12,
+                          color: Colors.black,
                         ),
                       ),
                     ],
@@ -178,14 +192,27 @@ class LocationPropertyCard extends StatelessWidget {
                   const SizedBox(height: 6),
 
                   // Price
-                  Text(
-                    price,
-                    style: const TextStyle(
-                      fontFamily: 'ProductSans',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14,
-                      color: Colors.black,
-                    ),
+                  Row(
+                    children: [
+                      SvgPicture.asset(
+                        'assets/icons/naira.svg',
+                        width: 13,
+                        height: 13,
+                        colorFilter: ColorFilter.mode(
+                          Colors.black,
+                          BlendMode.srcIn,
+                        ),
+                      ),
+                      Text(
+                        price,
+                        style: const TextStyle(
+                          fontFamily: 'Product Sans',
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
                   ),
 
                   const SizedBox(height: 2),

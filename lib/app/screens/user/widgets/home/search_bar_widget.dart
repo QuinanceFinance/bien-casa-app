@@ -3,11 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class SearchBarWidget extends StatelessWidget {
   final Function()? onTap;
-  
-  const SearchBarWidget({
-    super.key,
-    this.onTap,
-  });
+
+  const SearchBarWidget({super.key, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +12,9 @@ class SearchBarWidget extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        height: 46,
+        height: 60,
         decoration: BoxDecoration(
-          color: Colors.grey[200],
+          color: Color(0xffF8F8F8),
           borderRadius: BorderRadius.circular(15),
         ),
         child: Row(
@@ -31,8 +28,10 @@ class SearchBarWidget extends StatelessWidget {
               'Search Bien Casa...',
               style: TextStyle(
                 color: Color(0xffBDBDBD),
-                fontSize: 16,
-                fontFamily: 'ProductSans',
+                fontFamily: 'Product Sans Light',
+                fontWeight: FontWeight.w300,
+                fontStyle: FontStyle.normal,
+                fontSize: 18,
               ),
             ),
             const Spacer(),

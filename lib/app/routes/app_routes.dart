@@ -32,4 +32,6 @@ abstract class AppRoutes {
   static const RECENTLY_ADDED = '/recently-added';
   static const LOCATION_PROPERTIES = '/location-properties';
   static const PROPERTY_DETAIL = '/property-detail';
+  static const MAP = '/map';
+  static const FLATMATE = '/flatmate';
 }

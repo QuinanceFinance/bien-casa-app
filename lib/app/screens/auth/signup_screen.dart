@@ -17,13 +17,11 @@ class SignUpScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: Get.width * 0.06,
-            vertical: Get.height * 0.02,
-          ),
+          padding: EdgeInsets.symmetric(horizontal: Get.width * 0.06),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: Get.height * 0.02),
               // Logo
               Container(
                 padding: EdgeInsets.symmetric(vertical: Get.width * 0.02),
@@ -43,21 +41,25 @@ class SignUpScreen extends StatelessWidget {
                     TextSpan(
                       text: 'How do you\nwant to use\n',
                       style: TextStyle(
-                        fontSize: Get.width * 0.10,
-                        fontFamily: 'ProductSans',
+                        fontSize: 40,
+                        fontFamily: 'Product Sans-Black',
                         fontWeight: FontWeight.w900,
+                        fontStyle: FontStyle.normal,
                         color: Colors.black,
-                        height: 1.2,
+                        height: 1,
+                        letterSpacing: 0,
                       ),
                     ),
                     TextSpan(
                       text: 'Bien Casa?',
                       style: TextStyle(
-                        fontSize: Get.width * 0.10,
-                        fontFamily: 'ProductSans',
-                        fontWeight: FontWeight.normal,
+                        fontSize: 40,
+                        fontFamily: 'Product Sans',
+                        fontWeight: FontWeight.w400,
+                        fontStyle: FontStyle.normal,
                         color: Colors.black,
-                        height: 1.2,
+                        height: 1,
+                        letterSpacing: 0,
                       ),
                     ),
                   ],
@@ -108,23 +110,31 @@ class SignUpScreen extends StatelessWidget {
               // Terms and Privacy
               Padding(
                 padding: EdgeInsets.only(
-                  bottom: Get.height * 0.02,
-                  top: Get.height * 0.02,
+                  // bottom: Get.height * 0.02,
+                  // top: Get.height * 0.02,
                 ),
                 child: Text.rich(
                   TextSpan(
                     text: 'By using Bien Casa you agree to our ',
                     style: TextStyle(
                       fontSize: 15,
-                      fontFamily: 'ProductSans',
-                      color: Colors.black54,
+                      fontFamily: 'Product Sans Light',
+                      fontWeight: FontWeight.w300,
+                      fontStyle: FontStyle.normal,
+                      leadingDistribution: TextLeadingDistribution.proportional,
+                      letterSpacing: 0,
                     ),
                     children: [
                       TextSpan(
                         text: 'Term of Service',
                         style: TextStyle(
-                          fontWeight: FontWeight.w900,
-                          color: Colors.black,
+                          fontFamily: 'Product Sans',
+                          fontWeight: FontWeight.w700,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 15,
+                          leadingDistribution:
+                              TextLeadingDistribution.proportional,
+                          letterSpacing: 0,
                         ),
                         recognizer:
                             TapGestureRecognizer()
@@ -137,8 +147,13 @@ class SignUpScreen extends StatelessWidget {
                       TextSpan(
                         text: 'Privacy Policy',
                         style: TextStyle(
-                          fontWeight: FontWeight.w900,
-                          color: Colors.black,
+                          fontFamily: 'Product Sans',
+                          fontWeight: FontWeight.w700,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 15,
+                          leadingDistribution:
+                              TextLeadingDistribution.proportional,
+                          letterSpacing: 0,
                         ),
                         recognizer:
                             TapGestureRecognizer()
@@ -151,6 +166,7 @@ class SignUpScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
+              SizedBox(height: 30),
             ],
           ),
         ),
@@ -200,9 +216,10 @@ class SignUpScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 20,
                           height: 1.2,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans',
                           fontWeight: FontWeight.w400,
-                          color: isComingSoon ? Color(0xffBDBDBD) : Colors.black,
+                          color:
+                              isComingSoon ? Color(0xffBDBDBD) : Colors.black,
                         ),
                       ),
                     ),
@@ -219,11 +236,16 @@ class SignUpScreen extends StatelessWidget {
                           'assets/icons/right_arow.svg',
                           width: 15,
                           height: 11,
-                          colorFilter: isComingSoon
-                              ? ColorFilter.mode(
-                                  Color(0xffBDBDBD), BlendMode.srcIn)
-                              : ColorFilter.mode(
-                                  Colors.black, BlendMode.srcIn),
+                          colorFilter:
+                              isComingSoon
+                                  ? ColorFilter.mode(
+                                    Color(0xffBDBDBD),
+                                    BlendMode.srcIn,
+                                  )
+                                  : ColorFilter.mode(
+                                    Colors.black,
+                                    BlendMode.srcIn,
+                                  ),
                         ),
                       ),
                     ),
@@ -234,9 +256,9 @@ class SignUpScreen extends StatelessWidget {
             if (isComingSoon)
               Positioned(
                 top: 10,
-                right: 10,
+                right: 5,
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 5),
                   decoration: BoxDecoration(
                     color: Colors.orange,
                     borderRadius: BorderRadius.circular(15),
@@ -246,7 +268,7 @@ class SignUpScreen extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 8,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -280,7 +302,7 @@ class SignUpScreen extends StatelessWidget {
                     text: 'Have an\naccount?\n',
                     style: TextStyle(
                       fontSize: 20,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       color: Color(0xff6B6B6B),
                     ),
                   ),
@@ -288,7 +310,7 @@ class SignUpScreen extends StatelessWidget {
                     text: 'Sign in',
                     style: TextStyle(
                       fontSize: 20,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       fontWeight: FontWeight.w900,
                       color: Colors.black,
                     ),

@@ -6,9 +6,13 @@ class AppConstants {
   static const String apiVersion = 'v1';
 
   // Google Maps API Key
-  static const String googleMapsApiKey = 'your_google_maps_api_key';
+  static const String googleMapsApiKey = 'AIzaSyDZaLuHJN_mn01DBjNjsEEsl-DdQdvYzwM';
 
   // Environment Settings
   static const String environment = 'development';
   static const bool debugMode = true;
+
+  static const String apiDoc = 'https://bien-casa-be-production.up.railway.app/api-docs/';
+
+  static const String baseApiUrl = 'https://bien-casa-be-production.up.railway.app/api';
 }

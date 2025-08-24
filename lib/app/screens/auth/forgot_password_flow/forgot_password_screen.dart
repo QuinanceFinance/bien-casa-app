@@ -47,7 +47,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                 'Forgot Password',
                 style: TextStyle(
                   fontSize: Get.width * 0.10,
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans',
                   fontWeight: FontWeight.w900,
                   color: Colors.black,
                 ),
@@ -59,7 +59,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                 'Enter your phone number to reset your password',
                 style: TextStyle(
                   fontSize: Get.width * 0.045,
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans',
                   color: Colors.black54,
                 ),
               ),
@@ -72,7 +72,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                 keyboardType: TextInputType.phone,
                 decoration: InputDecoration(
                   filled: true,
-    fillColor: Color(0xFFF8F8F8),
+                  fillColor: Color(0xFFF8F8F8),
                   hintText: 'Phone Number',
                   prefixIcon: Container(
                     padding: EdgeInsets.all(12),
@@ -83,17 +83,17 @@ class ForgotPasswordScreen extends StatelessWidget {
                     ),
                   ),
                   border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(15),
-      borderSide: BorderSide(color: Color(0xFFF8F8F8)),
-    ),
-    enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(15),
-      borderSide: BorderSide(color: Color(0xFFF8F8F8)),
-    ),
-    focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(15),
-      borderSide: BorderSide(color: Color(0xFFF8F8F8)),
-    ),
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Color(0xFFF8F8F8)),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Color(0xFFF8F8F8)),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(color: Color(0xFFF8F8F8)),
+                  ),
                 ),
               ),
 
@@ -102,7 +102,7 @@ class ForgotPasswordScreen extends StatelessWidget {
               // Send OTP Button
               SizedBox(
                 width: double.infinity,
-                height: Get.height < 600 ? 50 : 70,
+                height: 70,
                 child: ElevatedButton(
                   onPressed: controller.resendOTP,
                   style: ElevatedButton.styleFrom(
@@ -115,7 +115,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                     'Send OTP',
                     style: TextStyle(
                       fontSize: Get.width * 0.055,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       color: Colors.white,
                     ),
                   ),

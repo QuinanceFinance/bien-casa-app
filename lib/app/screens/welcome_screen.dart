@@ -33,7 +33,7 @@ class WelcomeScreen extends StatelessWidget {
                     Positioned(
                       top:
                           isSmallScreen ? Get.height * 0.04 : Get.height * 0.05,
-                      left: Get.width * 0.06,
+                      left: 20,
                       child: Container(
                         padding: EdgeInsets.all(Get.width * 0.02),
                         child: Image.asset(
@@ -52,7 +52,7 @@ class WelcomeScreen extends StatelessWidget {
                 flex: isSmallScreen ? 4 : 2,
                 child: Container(
                   padding: EdgeInsets.symmetric(
-                    horizontal: Get.width * 0.06,
+                    horizontal: 28,
                     vertical: Get.height * 0.01,
                   ),
                   color: Colors.white,
@@ -65,8 +65,8 @@ class WelcomeScreen extends StatelessWidget {
                             TextSpan(
                               text: 'Welcome\nTo ',
                               style: TextStyle(
-                                fontSize: Get.width * 0.09,
-                                fontFamily: 'ProductSans',
+                                fontSize: 40,
+                                fontFamily: 'Product Sans',
                                 fontWeight: FontWeight.w400,
                                 color: Colors.black,
                               ),
@@ -74,9 +74,13 @@ class WelcomeScreen extends StatelessWidget {
                             TextSpan(
                               text: 'Bien Casa',
                               style: TextStyle(
-                                fontSize: Get.width * 0.09,
-                                fontFamily: 'ProductSans',
+                                fontSize: 40,
+                                fontFamily: 'Product Sans-Black',
                                 fontWeight: FontWeight.w900,
+                                fontStyle: FontStyle.normal,
+                                leadingDistribution:
+                                    TextLeadingDistribution.even,
+                                letterSpacing: 0,
                                 color: Colors.black,
                               ),
                             ),
@@ -87,18 +91,19 @@ class WelcomeScreen extends StatelessWidget {
                       Text(
                         'Africa\'s most trusted real estate marketplace helping you find your dream home, co-live affordably, secure flexible property financing, or list your properties with ease.',
                         style: TextStyle(
-                          fontSize: Get.width * 0.04,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product SansLight',
                           fontWeight: FontWeight.w300,
-                          color: Colors.black,
-                          height: 1.5,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 15,
+                          height: 1.33,
+                          letterSpacing: 0,
                         ),
                       ),
                       SizedBox(height: Get.height * 0.03),
                       // Buttons
                       SizedBox(
                         width: double.infinity,
-                        height: Get.height < 600 ? 50 : 70,
+                        height: 70,
                         child: ElevatedButton(
                           onPressed: controller.navigateToSignUp,
                           style: ElevatedButton.styleFrom(
@@ -111,7 +116,7 @@ class WelcomeScreen extends StatelessWidget {
                             'Sign up',
                             style: TextStyle(
                               fontSize: Get.width * 0.055,
-                              fontFamily: 'ProductSans',
+                              fontFamily: 'Product Sans',
                               color: Colors.white,
                             ),
                           ),
@@ -120,7 +125,7 @@ class WelcomeScreen extends StatelessWidget {
                       SizedBox(height: Get.height * 0.016),
                       SizedBox(
                         width: double.infinity,
-                        height: Get.height < 600 ? 50 : 70,
+                        height: 70,
                         child: OutlinedButton(
                           onPressed: controller.navigateToSignIn,
                           style: OutlinedButton.styleFrom(
@@ -136,7 +141,7 @@ class WelcomeScreen extends StatelessWidget {
                             'Sign in',
                             style: TextStyle(
                               fontSize: Get.width * 0.055,
-                              fontFamily: 'ProductSans',
+                              fontFamily: 'Product Sans',
                               color: Colors.black,
                             ),
                           ),

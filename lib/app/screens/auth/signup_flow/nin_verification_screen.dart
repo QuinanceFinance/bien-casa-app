@@ -1,5 +1,6 @@
 import 'package:bien_casa/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../controllers/auth_controller.dart';
 
@@ -61,20 +62,24 @@ class _NINVerificationScreenState extends State<NINVerificationScreen> {
                 Text(
                   'Verify\nyour Identity',
                   style: TextStyle(
-                    fontSize: Get.width * 0.09,
-                    fontFamily: 'ProductSans',
+                    fontFamily: 'Product Sans',
                     fontWeight: FontWeight.w400,
-                    color: Colors.black,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 40,
                     height: 1.2,
+                    letterSpacing: 0,
                   ),
                 ),
-                SizedBox(height: Get.height * 0.04),
+                SizedBox(height: 24),
                 Text(
                   'To verify your identity with your NIN, kindly enter your 11-digit NIN number below.',
                   style: TextStyle(
-                    fontSize: Get.width * 0.035,
-                    fontFamily: 'ProductSans',
+                    fontFamily: 'Product Sans Light',
                     fontWeight: FontWeight.w300,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 15.0,
+                    height: 1.0,
+                    letterSpacing: 0.0,
                     color: Colors.black,
                   ),
                 ),
@@ -82,8 +87,8 @@ class _NINVerificationScreenState extends State<NINVerificationScreen> {
                 Center(
                   child: Image.asset(
                     'assets/image/icon 1.png',
-                    width: 200,
-                    height: 200,
+                    width: 280,
+                    height: 280,
                   ),
                 ),
                 SizedBox(height: Get.height * 0.04),
@@ -92,9 +97,18 @@ class _NINVerificationScreenState extends State<NINVerificationScreen> {
                   keyboardType: TextInputType.number,
                   maxLength: 11,
                   decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(
+                      vertical: 20,
+                      horizontal: 20,
+                    ),
                     hintText: 'Enter your 11-digit NIN',
                     counterText: '',
                     fillColor: Color(0xffF8F8F8),
+                    hintStyle: TextStyle(
+                      fontFamily: 'Product Sans Light',
+                      fontWeight: FontWeight.w300,
+                      color: Color(0xFFBDBDBD),
+                    ),
                     filled: true,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
@@ -122,7 +136,7 @@ class _NINVerificationScreenState extends State<NINVerificationScreen> {
                             fontSize: 15,
                             color: Colors.black,
                             fontWeight: FontWeight.w300,
-                            fontFamily: 'ProductSans',
+                            fontFamily: 'Product Sans',
                           ),
                         ),
                         WidgetSpan(
@@ -133,8 +147,8 @@ class _NINVerificationScreenState extends State<NINVerificationScreen> {
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 17,
-                                fontFamily: 'ProductSans',
-                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Product Sans',
+                                fontWeight: FontWeight.w700,
                               ),
                             ),
                           ),
@@ -146,7 +160,7 @@ class _NINVerificationScreenState extends State<NINVerificationScreen> {
                 SizedBox(height: Get.height * 0.04),
                 SizedBox(
                   width: double.infinity,
-                  height: isSmallScreen ? 50 : 70,
+                  height: 70,
                   child: ElevatedButton(
                     onPressed:
                         isButtonEnabled
@@ -162,8 +176,12 @@ class _NINVerificationScreenState extends State<NINVerificationScreen> {
                     child: Text(
                       'Continue',
                       style: TextStyle(
-                        fontSize: Get.width * 0.055,
-                        fontFamily: 'ProductSans',
+                        fontFamily: 'Product Sans',
+                        fontWeight: FontWeight.w400,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 22,
+                        height: 40 / 22,
+                        letterSpacing: 0,
                         color: Colors.white,
                       ),
                     ),
@@ -199,7 +217,7 @@ void _showNINCheckMethods() {
             text: TextSpan(
               style: TextStyle(
                 fontSize: Get.width * 0.035,
-                fontFamily: 'ProductSans',
+                fontFamily: 'Product Sans',
                 fontWeight: FontWeight.w300,
                 color: Colors.black,
                 height: 1.5,
@@ -240,7 +258,7 @@ void _showNINCheckMethods() {
             'Steps to check your NIN using the USSD code',
             style: TextStyle(
               fontSize: Get.width * 0.045,
-              fontFamily: 'ProductSans',
+              fontFamily: 'Product Sans',
               fontWeight: FontWeight.bold,
               color: Colors.black,
             ),
@@ -254,7 +272,7 @@ void _showNINCheckMethods() {
                   '• Dial *346#\n• Select "NIN Retrieval" by typing "1"\n• Follow the steps displayed on your screen\n• Provide the required inputs',
                   style: TextStyle(
                     fontSize: Get.width * 0.035,
-                    fontFamily: 'ProductSans',
+                    fontFamily: 'Product Sans',
                     fontWeight: FontWeight.w300,
                     color: Colors.black,
                     height: 1.5,
@@ -268,7 +286,7 @@ void _showNINCheckMethods() {
             'Other ways to check your NIN',
             style: TextStyle(
               fontSize: Get.width * 0.045,
-              fontFamily: 'ProductSans',
+              fontFamily: 'Product Sans',
               fontWeight: FontWeight.bold,
               color: Colors.black,
             ),
@@ -282,7 +300,7 @@ void _showNINCheckMethods() {
                   '• Visit any NIMC office\n• Download the NIMC mobile app and follow the instructions\n• Visit the NIN Status Portal by visiting https://nin.mtn.ng/nin/status\n• Visit MTN\'s corporate website https://mtn.ng/\n• Use the myMTNApp\n• Use Zigi',
                   style: TextStyle(
                     fontSize: Get.width * 0.035,
-                    fontFamily: 'ProductSans',
+                    fontFamily: 'Product Sans',
                     fontWeight: FontWeight.w300,
                     color: Colors.black,
                     height: 1.5,
@@ -296,7 +314,7 @@ void _showNINCheckMethods() {
             'The NIN is an 11-digit number that is randomly assigned to an individual when they enroll into the National Identity Database (NIDB).',
             style: TextStyle(
               fontSize: Get.width * 0.035,
-              fontFamily: 'ProductSans',
+              fontFamily: 'Product Sans',
               fontWeight: FontWeight.w300,
               color: Colors.black,
               height: 1.5,
@@ -318,7 +336,7 @@ void _showNINCheckMethods() {
                 'Ok',
                 style: TextStyle(
                   fontSize: Get.width * 0.045,
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans',
                   color: Colors.white,
                 ),
               ),

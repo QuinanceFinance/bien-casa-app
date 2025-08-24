@@ -42,7 +42,7 @@ class TermsOfServiceScreen extends StatelessWidget {
                 'Terms of Service',
                 style: TextStyle(
                   fontSize: Get.width * 0.10,
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans',
                   fontWeight: FontWeight.w900,
                   color: Colors.black,
                 ),
@@ -78,7 +78,7 @@ class TermsOfServiceScreen extends StatelessWidget {
                     'For questions about these terms, please contact our support team.',
                     style: TextStyle(
                       fontSize: Get.width * 0.04,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       color: Colors.black54,
                       height: 1.5,
                     ),

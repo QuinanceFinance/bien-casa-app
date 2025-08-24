@@ -19,7 +19,7 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final steps = ['Identity', 'Selfie', 'Address'];
+    final steps = ['Identity doc', 'Selfie', '      Address'];
     final isSmallScreen = Get.height < 600;
 
     return Scaffold(
@@ -42,7 +42,7 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                     style: TextStyle(
                       color: isActive ? Colors.black : Colors.grey[600],
                       fontSize: 12,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       fontWeight: isActive ? FontWeight.w400 : FontWeight.w300,
                     ),
                   ),
@@ -132,7 +132,9 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
             SizedBox(height: 2.5),
           ],
         ),
+        bottom: null,
       ),
+
       body: Stack(
         children: [
           Column(
@@ -169,22 +171,26 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                       Text(
                         "Let's verify\nyour address",
                         style: TextStyle(
-                          fontSize: Get.width * 0.09,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans Black',
                           fontWeight: FontWeight.w900,
-                          color: Colors.black,
-                          height: 1.2,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 40,
+                          leadingDistribution:
+                              TextLeadingDistribution.proportional,
+                          letterSpacing: 0,
+                          height: 0,
                         ),
                       ),
-                      SizedBox(height: Get.height * 0.02),
+                      SizedBox(height: 24),
                       RichText(
                         text: TextSpan(
                           style: TextStyle(
-                            fontSize: 15,
-                            fontFamily: 'ProductSans',
+                            fontFamily: 'Product Sans Light',
                             fontWeight: FontWeight.w300,
-                            color: Colors.black,
-                            height: 1.5,
+                            fontStyle: FontStyle.normal,
+                            fontSize: 15,
+                            letterSpacing: 0,
+                            color: Color(0xff020202),
                           ),
                           children: [
                             TextSpan(
@@ -193,12 +199,19 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                             ),
                             TextSpan(
                               text: 'Utility bill  |  Bank statement',
-                              style: TextStyle(fontWeight: FontWeight.w600),
+                              style: TextStyle(
+                                fontFamily: 'Product Sans',
+                                fontWeight: FontWeight.w700,
+                                fontStyle: FontStyle.normal,
+                                fontSize: 15,
+                                letterSpacing: 0,
+                                color: Color(0xff020202),
+                              ),
                             ),
                           ],
                         ),
                       ),
-                      SizedBox(height: Get.height * 0.02),
+                      SizedBox(height: 62),
                       Spacer(),
                       Row(
                         children: [
@@ -210,17 +223,20 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                           Text(
                             "Most people finish this step under 1 minute",
                             style: TextStyle(
-                              color: Color(0xff6B6B6B),
-                              fontSize: 14,
+                              fontFamily: 'Product Sans Light',
                               fontWeight: FontWeight.w300,
+                              fontStyle: FontStyle.normal,
+                              fontSize: 15.0,
+                              letterSpacing: 0,
+                              color: Color(0xff6B6B6B),
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: Get.height * 0.03),
+                      SizedBox(height: 20),
                       SizedBox(
                         width: double.infinity,
-                        height: Get.height < 600 ? 50 : 70,
+                        height: 70,
                         child: ElevatedButton(
                           onPressed:
                               _isLoading
@@ -314,14 +330,18 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                                   : Text(
                                     'Verify your address',
                                     style: TextStyle(
-                                      fontSize: Get.width * 0.055,
-                                      fontFamily: 'ProductSans',
+                                      fontFamily: 'Product Sans',
+                                      fontWeight: FontWeight.w400,
+                                      fontStyle: FontStyle.normal,
+                                      fontSize: 22,
+                                      height: 1,
                                       color: Colors.white,
+                                      letterSpacing: 0,
                                     ),
                                   ),
                         ),
                       ),
-                      SizedBox(height: Get.height * 0.02),
+                      SizedBox(height: 50),
                     ],
                   ),
                 ),

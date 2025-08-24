@@ -28,15 +28,15 @@ class PropertyListItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 120,
-        margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+        height: 110,
+        margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
               blurRadius: 4,
-              color: Color(0x26000000),
+              color: Color(0x26000000).withValues(alpha: 0.1),
               offset: Offset(0, 0),
             ),
           ],
@@ -125,8 +125,11 @@ class PropertyListItem extends StatelessWidget {
                     Text(
                       name,
                       style: const TextStyle(
-                        fontFamily: 'ProductSans',
-                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Product Sans',
+                        fontWeight: FontWeight.w400,
+                        fontStyle: FontStyle.normal,
+                        color: Colors.black,
+                        height: 1,
                         fontSize: 16,
                       ),
                       maxLines: 1,
@@ -146,8 +149,13 @@ class PropertyListItem extends StatelessWidget {
                           child: Text(
                             address,
                             style: const TextStyle(
-                              fontFamily: 'ProductSans',
-                              fontSize: 12,
+                              fontFamily: 'Product Sans Light',
+                              fontWeight: FontWeight.w300,
+                              fontStyle: FontStyle.normal,
+                              fontSize: 12.5,
+                              height: 1,
+                              letterSpacing: 0,
+                              color: Colors.black,
                             ),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
@@ -168,31 +176,45 @@ class PropertyListItem extends StatelessWidget {
                         Text(
                           '$size - $type',
                           style: const TextStyle(
-                            fontFamily: 'ProductSans',
-                            fontSize: 12,
+                            fontFamily: 'Product Sans Light',
+                            fontWeight: FontWeight.w300,
+                            fontStyle: FontStyle.normal,
+                            fontSize: 12.5,
+                            height: 1,
+                            letterSpacing: 0,
+                            color: Colors.black,
                           ),
                         ),
                       ],
                     ),
-                    const Spacer(),
+                    // const SizedBox(width: 14),
                     // Price with bolder styling
-                    RichText(
-                      text: TextSpan(
+                    Padding(
+                      padding: const EdgeInsets.only(top: 6.0),
+                      child: Row(
                         children: [
-                          TextSpan(
-                            text: price.split(' ')[0],
+                          SvgPicture.asset(
+                            'assets/icons/naira.svg',
+                            width: 13,
+                            height: 13,
+                            colorFilter: ColorFilter.mode(
+                              Colors.black,
+                              BlendMode.srcIn,
+                            ),
+                          ),
+                          Text(
+                            price,
                             style: const TextStyle(
-                              fontFamily: 'ProductSans',
-                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Product Sans',
+                              fontWeight: FontWeight.w400,
                               fontSize: 14,
                               color: Colors.black,
                             ),
                           ),
-                          TextSpan(
-                            text:
-                                ' ${price.split(' ').skip(1).join(' ')}', // The 'per unit' text
+                          Text(
+                            ' ${price.split(' ').skip(1).join(' ')}', // The 'per unit' text
                             style: const TextStyle(
-                              fontFamily: 'ProductSans',
+                              fontFamily: 'Product Sans',
                               fontSize: 12,
                               color: Colors.black,
                             ),

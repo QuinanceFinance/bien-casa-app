@@ -30,15 +30,14 @@ class KYCSuccessScreen extends StatelessWidget {
                     ),
                     // Logo positioned at top left
                     Positioned(
-                      top:
-                          isSmallScreen ? Get.height * 0.04 : Get.height * 0.05,
-                      left: Get.width * 0.06,
+                      top: 40,
+                      left: 28,
                       child: Container(
-                        padding: EdgeInsets.all(Get.width * 0.02),
+                        padding: EdgeInsets.symmetric(vertical: 28),
                         child: Image.asset(
                           'assets/image/logo_white.png',
-                          width: Get.width * 0.12,
-                          height: Get.width * 0.12,
+                          width: 50,
+                          height: 50,
                         ),
                       ),
                     ),
@@ -51,7 +50,7 @@ class KYCSuccessScreen extends StatelessWidget {
                 flex: isSmallScreen ? 4 : 2,
                 child: Container(
                   padding: EdgeInsets.symmetric(
-                    horizontal: Get.width * 0.06,
+                    horizontal: 28,
                     vertical: Get.height * 0.01,
                   ),
                   color: Colors.white,
@@ -59,12 +58,13 @@ class KYCSuccessScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "You're All \nSet To Go",
+                        "You're All Set To\nGo!",
                         style: TextStyle(
-                          fontSize: 40,
                           fontFamily: 'Product Sans Black',
                           fontWeight: FontWeight.w900,
-                          height: 1, 
+                          fontStyle: FontStyle.normal,
+                          fontSize: 40,
+                          height: 1,
                           letterSpacing: 0,
                           color: Color(0xff29BCA2),
                         ),
@@ -73,19 +73,20 @@ class KYCSuccessScreen extends StatelessWidget {
                       Text(
                         'Congrats! your account is successfully created, \nyou can now find your ideal flat mate based on \nbudget, location, lifestyle preferences.',
                         style: TextStyle(
-                          fontSize: 15,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans Light',
                           fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 15,
+                          height: 1.25,
                           color: Colors.black,
-                          height: 1.5,
                         ),
                       ),
                       Spacer(),
                       SizedBox(
                         width: double.infinity,
-                        height: Get.height < 600 ? 50 : 70,
+                        height: 70,
                         child: ElevatedButton(
-                          onPressed: () => Get.offAllNamed(AppRoutes.HOME),
+                          onPressed: () => Get.offAllNamed(AppRoutes.USER_HOME),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black,
                             shape: RoundedRectangleBorder(
@@ -95,13 +96,18 @@ class KYCSuccessScreen extends StatelessWidget {
                           child: Text(
                             'Take me in',
                             style: TextStyle(
-                              fontSize: Get.width * 0.055,
-                              fontFamily: 'ProductSans',
+                              fontFamily: 'Product Sans',
+                              fontWeight: FontWeight.w400,
+                              fontStyle: FontStyle.normal,
+                              fontSize: 22,
+                              height: 40 / 22,
+                              letterSpacing: 0,
                               color: Colors.white,
                             ),
                           ),
                         ),
-                      ),SizedBox(height: Get.height * 0.04),
+                      ),
+                      SizedBox(height: 50),
                     ],
                   ),
                 ),

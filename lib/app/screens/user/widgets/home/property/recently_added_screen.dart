@@ -5,7 +5,7 @@ import '../property_list_item.dart';
 
 class RecentlyAddedScreen extends StatelessWidget {
   final UserHomeController _controller = Get.find<UserHomeController>();
-  
+
   RecentlyAddedScreen({super.key});
 
   @override
@@ -16,15 +16,18 @@ class RecentlyAddedScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back_ios_new, color: Colors.black),
           onPressed: () => Get.back(),
         ),
         title: const Text(
           'Recently Added Properties',
           style: TextStyle(
-            fontFamily: 'ProductSans',
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+            fontFamily: 'Product Sans',
+            fontSize: 24,
+            fontWeight: FontWeight.w400,
+            fontStyle: FontStyle.normal,
+            height: 1.04,
+            letterSpacing: -0.32,
             color: Colors.black,
           ),
         ),
@@ -37,9 +40,11 @@ class RecentlyAddedScreen extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.only(bottom: 16),
             child: PropertyListItem(
-              imageUrl: property['images'] != null && (property['images'] as List).isNotEmpty
-                  ? property['images'][0]
-                  : '',
+              imageUrl:
+                  property['images'] != null &&
+                          (property['images'] as List).isNotEmpty
+                      ? property['images'][0]
+                      : '',
               name: property['name'] ?? '',
               address: property['address'] ?? '',
               price: property['price'] ?? '',

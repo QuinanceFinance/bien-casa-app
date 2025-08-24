@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:bien_casa/app/routes/app_routes.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:geolocator/geolocator.dart';
@@ -274,9 +273,12 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                         const Text(
                           'Update your address',
                           style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'ProductSans',
+                            fontFamily: 'Product Sans',
+                            fontWeight: FontWeight.w700,
+                            fontStyle: FontStyle.normal,
+                            fontSize: 18.0,
+                            color: Colors.black,
+                            letterSpacing: 0.0,
                           ),
                         ),
                       ],
@@ -290,8 +292,11 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                         'Skip',
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 16,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans',
+                          fontWeight: FontWeight.w400,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 15,
+                          letterSpacing: 0,
                         ),
                       ),
                     ),
@@ -303,9 +308,12 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   child: RichText(
                     text: TextSpan(
                       style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'ProductSans',
+                        fontFamily: 'Product Sans Light',
+                        fontWeight: FontWeight.w300,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 15,
                         color: Colors.black,
+                        letterSpacing: 0,
                       ),
                       children: [
                         TextSpan(
@@ -329,30 +337,77 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                 SizedBox(height: 24),
                 Center(
                   child: Container(
-                    width: 320,
+                    alignment: Alignment.center,
+                    width: double.infinity,
                     height: 70,
                     decoration: BoxDecoration(
                       color: Color(0xFFF8F8F8),
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       border: Border.all(color: Colors.black, width: 1),
                     ),
                     child: DropdownButtonFormField<String>(
-                      icon: Icon(Icons.keyboard_arrow_down_sharp),
+                      dropdownColor: Colors.white,
+                      icon: Icon(
+                        Icons.keyboard_arrow_down_sharp,
+                        color: Colors.black,
+                        size: 32,
+                      ),
                       isExpanded: true,
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         contentPadding: EdgeInsets.symmetric(horizontal: 16),
                         fillColor: Colors.white,
                       ),
-                      hint: Center(child: Text('Utility bill')),
+
+                      hint: Text(
+                        'Utility bill',
+                        style: TextStyle(
+                          fontFamily: 'Product Sans Light',
+                          fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 18,
+                          leadingDistribution:
+                              TextLeadingDistribution.proportional,
+                          letterSpacing: 0,
+                          color: Colors.black,
+                        ),
+                      ),
                       items: [
                         DropdownMenuItem(
                           value: 'utility',
-                          child: Center(child: Text('Utility bill')),
+                          child: Center(
+                            child: Text(
+                              'Utility bill',
+                              style: TextStyle(
+                                fontFamily: 'Product Sans Light',
+                                fontWeight: FontWeight.w300,
+                                fontStyle: FontStyle.normal,
+                                fontSize: 18,
+                                leadingDistribution:
+                                    TextLeadingDistribution.proportional,
+                                letterSpacing: 0,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
                         ),
                         DropdownMenuItem(
                           value: 'bank',
-                          child: Center(child: Text('Bank statement')),
+                          child: Center(
+                            child: Text(
+                              'Bank statement',
+                              style: TextStyle(
+                                fontFamily: 'Product Sans Light',
+                                fontWeight: FontWeight.w300,
+                                fontStyle: FontStyle.normal,
+                                fontSize: 18,
+                                leadingDistribution:
+                                    TextLeadingDistribution.proportional,
+                                letterSpacing: 0,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
                         ),
                       ],
                       onChanged: (value) {},
@@ -362,11 +417,11 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                 SizedBox(height: 16),
                 Center(
                   child: Container(
-                    width: 320,
-                    height: 70,
+                    width: double.infinity,
+                    height: 100,
                     decoration: BoxDecoration(
                       color: Color(0xFFF8F8F8),
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       border: Border.all(color: Colors.black, width: 1),
                     ),
                     child: InkWell(
@@ -375,12 +430,12 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                         child:
                             _capturedImage != null
                                 ? ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
+                                  borderRadius: BorderRadius.circular(15),
                                   child: Image.file(
                                     File(_capturedImage!.path),
                                     width: double.infinity,
                                     height: double.infinity,
-                                    fit: BoxFit.cover,
+                                    fit: BoxFit.fill,
                                   ),
                                 )
                                 : Icon(
@@ -392,7 +447,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 24),
+                SizedBox(height: 94),
                 Row(
                   children: [
                     Icon(Icons.check_circle, color: Colors.black, size: 24),
@@ -401,15 +456,17 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                       'This is also my mailing address',
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 16,
-                        fontFamily: 'ProductSans',
+                        fontFamily: 'Product Sans Light',
+                        fontWeight: FontWeight.w300,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 15,
                       ),
                     ),
                   ],
                 ),
                 SizedBox(height: 24),
                 SizedBox(
-                  height: Get.width > 600 ? 50 : 70,
+                  height: 70,
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
@@ -427,14 +484,15 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                       'Submit',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: 'ProductSans',
+                        fontFamily: 'Product Sans',
+                        fontWeight: FontWeight.w400,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 22,
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 16),
+                SizedBox(height: 30),
               ],
             ),
           ),
@@ -487,12 +545,18 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                             Navigator.pop(context);
                           },
                         ),
-                        const Text(
-                          'Update your address',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'ProductSans',
+                        Text.rich(
+                          TextSpan(
+                            text: 'Update your address',
+                            style: TextStyle(
+                              fontFamily: 'Product Sans',
+                              fontWeight: FontWeight.w700,
+                              color: Colors.black,
+                              fontStyle: FontStyle.normal,
+                              fontSize: 18.0,
+                              leadingDistribution: TextLeadingDistribution.even,
+                              letterSpacing: 0.0,
+                            ),
                           ),
                         ),
                       ],
@@ -506,30 +570,47 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                         'Skip',
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 16,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans',
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400,
+                          fontStyle: FontStyle.normal,
+                          letterSpacing: 0,
+                          height: 20 / 15,
                         ),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 16),
+                SizedBox(height: 10),
                 TextField(
                   controller: _houseNoController,
                   decoration: InputDecoration(
                     hintText: 'House No.',
+                    hintStyle: TextStyle(
+                      fontFamily: 'Product Sans Light',
+                      fontWeight: FontWeight.w300,
+                      fontStyle: FontStyle.normal,
+                      fontSize: 18,
+                      height: 1,
+                      color: Color(0xffBDBDBD),
+                      letterSpacing: 0,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 20,
+                    ),
                     fillColor: Color(0xffF8F8F8),
                     filled: true,
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                   ),
@@ -539,18 +620,31 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   controller: _streetNameController,
                   decoration: InputDecoration(
                     hintText: 'Street Name',
+                    hintStyle: TextStyle(
+                      fontFamily: 'Product Sans Light',
+                      fontWeight: FontWeight.w300,
+                      fontStyle: FontStyle.normal,
+                      fontSize: 18,
+                      height: 1,
+                      color: Color(0xffBDBDBD),
+                      letterSpacing: 0,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 20,
+                    ),
                     fillColor: Color(0xffF8F8F8),
                     filled: true,
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                   ),
@@ -560,18 +654,31 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   controller: _cityController,
                   decoration: InputDecoration(
                     hintText: 'City/Town',
+                    hintStyle: TextStyle(
+                      fontFamily: 'Product Sans Light',
+                      fontWeight: FontWeight.w300,
+                      fontStyle: FontStyle.normal,
+                      fontSize: 18,
+                      height: 1,
+                      color: Color(0xffBDBDBD),
+                      letterSpacing: 0,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 20,
+                    ),
                     fillColor: Color(0xffF8F8F8),
                     filled: true,
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                   ),
@@ -581,18 +688,31 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   controller: _stateController,
                   decoration: InputDecoration(
                     hintText: 'State',
+                    hintStyle: TextStyle(
+                      fontFamily: 'Product Sans Light',
+                      fontWeight: FontWeight.w300,
+                      fontStyle: FontStyle.normal,
+                      fontSize: 18,
+                      height: 1,
+                      color: Color(0xffBDBDBD),
+                      letterSpacing: 0,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 20,
+                    ),
                     fillColor: Color(0xffF8F8F8),
                     filled: true,
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                   ),
@@ -602,18 +722,31 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   controller: _postalCodeController,
                   decoration: InputDecoration(
                     hintText: 'Postal Code',
+                    hintStyle: TextStyle(
+                      fontFamily: 'Product Sans Light',
+                      fontWeight: FontWeight.w300,
+                      fontStyle: FontStyle.normal,
+                      fontSize: 18,
+                      height: 1,
+                      color: Color(0xffBDBDBD),
+                      letterSpacing: 0,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 20,
+                    ),
                     fillColor: Color(0xffF8F8F8),
                     filled: true,
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                   ),
@@ -623,18 +756,31 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   controller: _countryController,
                   decoration: InputDecoration(
                     hintText: 'Country',
+                    hintStyle: TextStyle(
+                      fontFamily: 'Product Sans Light',
+                      fontWeight: FontWeight.w300,
+                      fontStyle: FontStyle.normal,
+                      fontSize: 18,
+                      height: 1,
+                      color: Color(0xffBDBDBD),
+                      letterSpacing: 0,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 20,
+                    ),
                     fillColor: Color(0xffF8F8F8),
                     filled: true,
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(15),
                       borderSide: BorderSide(color: Color(0xffF8F8F8)),
                     ),
                   ),
@@ -648,20 +794,23 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                       'This is also my mailing address',
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 16,
-                        fontFamily: 'ProductSans',
+                        fontFamily: 'Product Sans Light',
+                        fontWeight: FontWeight.w300,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 15,
+                        letterSpacing: 0,
                       ),
                     ),
                   ],
                 ),
                 SizedBox(height: 24),
                 SizedBox(
-                  height: Get.width > 600 ? 50 : 70,
+                  height: 70,
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.pop(context);
-                      Get.offAllNamed(AppRoutes.kycSuccess);
+                      _showAddressDetailsUtilityBill(_currentAddress);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
@@ -674,14 +823,16 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                       'Continue',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: 'ProductSans',
+                        fontFamily: 'Product Sans',
+                        fontWeight: FontWeight.w400,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 22,
+                        letterSpacing: 0,
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 16),
+                SizedBox(height: 30),
               ],
             ),
           ),
@@ -731,7 +882,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final steps = ['Identity', 'Selfie', 'Address'];
+    final steps = ['Identity doc', 'Selfie', '      Address'];
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -752,7 +903,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                     style: TextStyle(
                       color: isActive ? Colors.black : Colors.grey[600],
                       fontSize: 12,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       fontWeight: isActive ? FontWeight.w400 : FontWeight.w300,
                     ),
                   ),
@@ -894,21 +1045,24 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                     ),
                   ],
                 ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(16),
-                      child: Row(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             'Enter full address',
                             style: TextStyle(
+                              fontFamily: 'Product Sans',
+                              fontWeight: FontWeight.w700,
+                              fontStyle: FontStyle.normal,
                               fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'ProductSans',
+                              leadingDistribution: TextLeadingDistribution.even,
+                              letterSpacing: 0,
                             ),
                           ),
                           TextButton(
@@ -919,34 +1073,45 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                             child: Text(
                               'Skip',
                               style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.black,
+                                fontFamily: 'Product Sans',
                                 fontWeight: FontWeight.w400,
-                                fontFamily: 'ProductSans',
+                                fontStyle: FontStyle.normal,
+                                fontSize: 15,
+                                color: Colors.black,
+                                letterSpacing: 0,
                               ),
                             ),
                           ),
                         ],
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
-                      child: TextField(
+                      SizedBox(height: 6),
+                      TextField(
                         controller: _searchController,
                         decoration: InputDecoration(
+                          contentPadding: EdgeInsets.symmetric(
+                            vertical: 20,
+                            horizontal: 20,
+                          ),
+                          hintStyle: TextStyle(
+                            fontFamily: 'Product Sans Light',
+                            fontWeight: FontWeight.w300,
+                            fontStyle: FontStyle.normal,
+                            fontSize: 18,
+                            letterSpacing: 0,
+                          ),
                           hintText: '101 Jesse Jackson St. Abuja 900231',
                           fillColor: Color(0xffF8F8F8),
                           filled: true,
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(15),
                             borderSide: BorderSide(color: Color(0xffF8F8F8)),
                           ),
                           enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(15),
                             borderSide: BorderSide(color: Color(0xffF8F8F8)),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(15),
                             borderSide: BorderSide(color: Color(0xffF8F8F8)),
                           ),
                         ),
@@ -976,8 +1141,23 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                                               autofocus: true,
                                               controller: _searchController,
                                               decoration: InputDecoration(
+                                                contentPadding:
+                                                    EdgeInsets.symmetric(
+                                                      vertical: 20,
+                                                      horizontal: 20,
+                                                    ),
                                                 hintText:
                                                     'Start typing to see recommendations',
+                                                hintStyle: TextStyle(
+                                                  fontFamily:
+                                                      'Product Sans Light',
+                                                  fontWeight: FontWeight.w300,
+                                                  fontStyle: FontStyle.normal,
+                                                  fontSize: 18,
+                                                  height: 1,
+                                                  color: Color(0xff6B6B6B),
+                                                  letterSpacing: 0,
+                                                ),
                                                 fillColor: Color(0xffF8F8F8),
                                                 filled: true,
                                                 border: OutlineInputBorder(
@@ -1053,9 +1233,12 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                                                     style: TextStyle(
                                                       color: Color(0xff6B6B6B),
                                                       fontSize: 16,
-                                                      fontFamily: 'ProductSans',
+                                                      fontFamily:
+                                                          'Product Sans Light',
                                                       fontWeight:
                                                           FontWeight.w300,
+                                                      fontStyle:
+                                                          FontStyle.normal,
                                                     ),
                                                   ),
                                                   onTap: () {
@@ -1074,53 +1257,53 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                           );
                         },
                       ),
-                    ),
-                    SizedBox(height: 10),
-                    if (_showSuggestions == false)
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 16),
-                        child: Text(
+                      SizedBox(height: 6),
+                      SizedBox(height: 10),
+                      if (_showSuggestions == false)
+                        Text(
                           "Start typing to see recommendations",
                           style: TextStyle(
+                            fontFamily: 'Product Sans Light',
                             fontSize: 15,
                             fontWeight: FontWeight.w300,
+                            color: Color(0xff6B6B6B),
                           ),
                         ),
-                      ),
-                    SizedBox(height: 10),
-                    if (_showSuggestions && _searchController.text.isNotEmpty)
-                      Container(
-                        constraints: BoxConstraints(maxHeight: 200),
-                        padding: EdgeInsets.only(left: 5),
-                        child: ListView.builder(
-                          shrinkWrap: true,
-                          itemCount: _addressSuggestions.length,
-                          itemBuilder: (context, index) {
-                            return ListTile(
-                              leading: Icon(
-                                Icons.location_on,
-                                color: Color(0xff6B6B6B),
-                              ),
-                              title: Text(
-                                _addressSuggestions[index],
-                                style: TextStyle(
+                      SizedBox(height: 10),
+                      if (_showSuggestions && _searchController.text.isNotEmpty)
+                        Container(
+                          constraints: BoxConstraints(maxHeight: 200),
+                          padding: EdgeInsets.only(left: 5),
+                          child: ListView.builder(
+                            shrinkWrap: true,
+                            itemCount: _addressSuggestions.length,
+                            itemBuilder: (context, index) {
+                              return ListTile(
+                                leading: Icon(
+                                  Icons.location_on,
                                   color: Color(0xff6B6B6B),
-                                  fontSize: 16,
-                                  fontFamily: 'ProductSans',
-                                  fontWeight: FontWeight.w300,
                                 ),
-                              ),
-
-                              onTap:
-                                  () => _selectSuggestion(
-                                    _addressSuggestions[index],
+                                title: Text(
+                                  _addressSuggestions[index],
+                                  style: TextStyle(
+                                    color: Color(0xff6B6B6B),
+                                    fontSize: 16,
+                                    fontFamily: 'Product Sans',
+                                    fontWeight: FontWeight.w300,
                                   ),
-                            );
-                          },
+                                ),
+
+                                onTap:
+                                    () => _selectSuggestion(
+                                      _addressSuggestions[index],
+                                    ),
+                              );
+                            },
+                          ),
                         ),
-                      ),
-                    SizedBox(height: 16),
-                  ],
+                      SizedBox(height: 16),
+                    ],
+                  ),
                 ),
               ),
             ],

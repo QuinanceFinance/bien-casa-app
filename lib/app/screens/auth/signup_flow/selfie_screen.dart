@@ -12,9 +12,7 @@ class SelfieScreen extends StatelessWidget {
     if (status.isGranted) {
       try {
         final ImagePicker picker = ImagePicker();
-        final XFile? photo = await picker.pickImage(
-          source: ImageSource.camera,
-        );
+        final XFile? photo = await picker.pickImage(source: ImageSource.camera);
         if (photo != null) {
           Get.toNamed(AppRoutes.CHECK_QUALITY, arguments: photo);
         }
@@ -36,7 +34,7 @@ class SelfieScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final steps = ['Identity', 'Selfie', 'Address'];
+    final steps = ['Identity doc', 'Selfie', '      Address'];
     final isSmallScreen = Get.height < 600;
 
     return Scaffold(
@@ -59,7 +57,7 @@ class SelfieScreen extends StatelessWidget {
                     style: TextStyle(
                       color: isActive ? Colors.black : Colors.grey[600],
                       fontSize: 12,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       fontWeight: isActive ? FontWeight.w400 : FontWeight.w300,
                     ),
                   ),
@@ -82,7 +80,12 @@ class SelfieScreen extends StatelessWidget {
                           Expanded(
                             child: Container(
                               height: 1.5,
-                              color: isCompleted ? Colors.black : isActive ? Colors.black : Colors.grey[300]!,
+                              color:
+                                  isCompleted
+                                      ? Colors.black
+                                      : isActive
+                                      ? Colors.black
+                                      : Colors.grey[300]!,
                             ),
                           ),
                         Container(
@@ -92,40 +95,47 @@ class SelfieScreen extends StatelessWidget {
                             shape: BoxShape.circle,
                             color: Colors.white,
                             border: Border.all(
-                              color: isActive || isCompleted ? Colors.black : Colors.grey[300]!,
+                              color:
+                                  isActive || isCompleted
+                                      ? Colors.black
+                                      : Colors.grey[300]!,
                               width: 1.5,
                             ),
                           ),
-                          child: isActive
-                              ? Center(
-                                  child: Container(
-                                    width: 12,
-                                    height: 12,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.black,
-                                      border: Border.all(
-                                        color: Colors.white,
-                                        width: 1.5,
+                          child:
+                              isActive
+                                  ? Center(
+                                    child: Container(
+                                      width: 12,
+                                      height: 12,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.black,
+                                        border: Border.all(
+                                          color: Colors.white,
+                                          width: 1.5,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                )
-                              : isCompleted
+                                  )
+                                  : isCompleted
                                   ? Center(
-                                      child: Icon(
-                                        Icons.check,
-                                        size: 10,
-                                        color: Colors.black,
-                                      ),
-                                    )
+                                    child: Icon(
+                                      Icons.check,
+                                      size: 10,
+                                      color: Colors.black,
+                                    ),
+                                  )
                                   : null,
                         ),
                         if (index < steps.length - 1)
                           Expanded(
                             child: Container(
                               height: 1.5,
-                              color: isCompleted ? Colors.black : Colors.grey[300]!,
+                              color:
+                                  isCompleted
+                                      ? Colors.black
+                                      : Colors.grey[300]!,
                             ),
                           ),
                       ],
@@ -139,6 +149,7 @@ class SelfieScreen extends StatelessWidget {
         ),
         bottom: null,
       ),
+
       body: Stack(
         children: [
           Column(
@@ -175,47 +186,54 @@ class SelfieScreen extends StatelessWidget {
                       Text(
                         'Take a selfie',
                         style: TextStyle(
-                          fontSize: Get.width * 0.09,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product SansBlack',
                           fontWeight: FontWeight.w900,
-                          color: Colors.black,
-                          height: 1.2,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 40,
+                          color: Color(0xff1E1E1E),
+                          letterSpacing: 0,
                         ),
                       ),
-                      SizedBox(height: Get.height * 0.02),
+                      SizedBox(height: 24),
                       Text(
                         'The image should be clear and have your face fully inside the frame',
                         style: TextStyle(
-                          fontSize: 15,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product SansLight',
                           fontWeight: FontWeight.w300,
-                          color: Colors.black,
-                          height: 1.5,
+                          fontStyle: FontStyle.normal,
+                          color: Color(0xff020202),
+                          fontSize: 15.0,
+                          height: 1.0,
+                          letterSpacing: 0.0,
                         ),
                       ),
-                      SizedBox(height: Get.height * 0.02),
+                      SizedBox(height: 64),
                       Spacer(),
                       Row(
                         children: [
                           Icon(
                             Icons.access_time_rounded,
+                            size: 20,
                             color: Color(0xff6B6B6B),
                           ),
                           SizedBox(width: 10),
                           Text(
                             "Most people finish this step under 1 minutes",
                             style: TextStyle(
-                              color: Color(0xff6B6B6B),
-                              fontSize: 14,
+                              fontFamily: 'Product SansLight',
                               fontWeight: FontWeight.w300,
+                              fontStyle: FontStyle.normal,
+                              fontSize: 15,
+                              letterSpacing: 0,
+                              color: Color(0xff6B6B6B),
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: Get.height * 0.03),
+                      SizedBox(height: 20),
                       SizedBox(
                         width: double.infinity,
-                        height: Get.height < 600 ? 50 : 70,
+                        height: 70,
                         child: ElevatedButton(
                           onPressed: _takeSelfie,
                           style: ElevatedButton.styleFrom(
@@ -227,14 +245,17 @@ class SelfieScreen extends StatelessWidget {
                           child: Text(
                             'Take a selfie',
                             style: TextStyle(
-                              fontSize: Get.width * 0.055,
-                              fontFamily: 'ProductSans',
+                              fontFamily: 'Product Sans',
+                              fontWeight: FontWeight.w400,
+                              fontStyle: FontStyle.normal,
                               color: Colors.white,
+                              fontSize: 22,
+                              letterSpacing: 0,
                             ),
                           ),
                         ),
                       ),
-                      SizedBox(height: Get.height * 0.02),
+                      SizedBox(height: 50),
                     ],
                   ),
                 ),

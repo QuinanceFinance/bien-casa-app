@@ -9,13 +9,13 @@ String formatPrice(String price) {
   final value = int.tryParse(cleaned);
   if (value == null) return price;
   if (value >= 1000000000) {
-    return '₦${(value / 1000000000).toStringAsFixed(value % 1000000000 == 0 ? 0 : 1)}b';
+    return '${(value / 1000000000).toStringAsFixed(value % 1000000000 == 0 ? 0 : 1)}b';
   } else if (value >= 1000000) {
-    return '₦${(value / 1000000).toStringAsFixed(value % 1000000 == 0 ? 0 : 1)}m';
+    return '${(value / 1000000).toStringAsFixed(value % 1000000 == 0 ? 0 : 1)}m';
   } else if (value >= 1000) {
-    return '₦${(value / 1000).toStringAsFixed(value % 1000 == 0 ? 0 : 1)}k';
+    return '${(value / 1000).toStringAsFixed(value % 1000 == 0 ? 0 : 1)}k';
   } else {
-    return '₦$value';
+    return '$value';
   }
 }
 
@@ -48,14 +48,17 @@ class LocationPropertyList extends StatelessWidget {
         // Location indicator
         Row(
           children: [
-            const Icon(Icons.location_on, size: 18, color: Colors.black),
+            const Icon(Icons.location_on, size: 18, color: Color(0xff6B6B6B)),
             const SizedBox(width: 6),
             Text(
               locationName,
               style: const TextStyle(
-                fontFamily: 'ProductSans',
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
+                fontFamily: 'Product Sans Light',
+                fontWeight: FontWeight.w300,
+                fontStyle: FontStyle.normal,
+                fontSize: 15,
+                height: 1.5,
+                color: Color(0xff6B6B6B),
               ),
             ),
             const Spacer(),
@@ -74,10 +77,11 @@ class LocationPropertyList extends StatelessWidget {
             itemBuilder: (context, index) {
               final property = properties[index];
               return LocationPropertyCard(
-                imageUrl: property['images'] != null && 
-                         (property['images'] as List).isNotEmpty
-                         ? property['images'][0]
-                         : 'assets/image/placeholder.png',
+                imageUrl:
+                    property['images'] != null &&
+                            (property['images'] as List).isNotEmpty
+                        ? property['images'][0]
+                        : 'assets/image/placeholder.png',
                 name: property['name'] ?? '',
                 address: property['address'] ?? '',
                 price: property['price'] ?? '',

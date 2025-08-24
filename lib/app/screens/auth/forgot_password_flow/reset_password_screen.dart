@@ -47,7 +47,7 @@ class ResetPasswordScreen extends StatelessWidget {
                 'Reset Password',
                 style: TextStyle(
                   fontSize: Get.width * 0.10,
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans',
                   fontWeight: FontWeight.w900,
                   color: Colors.black,
                 ),
@@ -59,7 +59,7 @@ class ResetPasswordScreen extends StatelessWidget {
                 'Create a new password for your account',
                 style: TextStyle(
                   fontSize: Get.width * 0.045,
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans',
                   color: Colors.black54,
                 ),
               ),
@@ -141,7 +141,7 @@ class ResetPasswordScreen extends StatelessWidget {
               // Reset Password Button
               SizedBox(
                 width: double.infinity,
-                height: Get.height < 600 ? 50 : 70,
+                height: 70,
                 child: ElevatedButton(
                   onPressed: controller.resetPassword,
                   style: ElevatedButton.styleFrom(
@@ -154,7 +154,7 @@ class ResetPasswordScreen extends StatelessWidget {
                     'Reset Password',
                     style: TextStyle(
                       fontSize: Get.width * 0.055,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       color: Colors.white,
                     ),
                   ),

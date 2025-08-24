@@ -66,118 +66,162 @@ class _NINPasswordScreenState extends State<NINPasswordScreen> {
                 Text(
                   'Enter your\nPassword',
                   style: TextStyle(
-                    fontSize: Get.width * 0.09,
-                    fontFamily: 'ProductSans',
+                    fontFamily: 'Product Sans',
                     fontWeight: FontWeight.w400,
-                    color: Colors.black,
-                    height: 1.2,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 40,
+                    height: 1,
+                    leadingDistribution: TextLeadingDistribution.proportional,
+                    letterSpacing: 0,
                   ),
                 ),
-                SizedBox(height: Get.height * 0.03),
+                SizedBox(height: 24),
                 Text(
                   'Kindly enter your preferred password below to \nproceed with identity verification',
                   style: TextStyle(
-                    fontSize: 15,
-                    fontFamily: 'ProductSans',
+                    fontFamily: 'Product Sans Light',
                     fontWeight: FontWeight.w300,
-                    color: Colors.black,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 15,
+                    height: 1,
+                    leadingDistribution: TextLeadingDistribution.proportional,
+                    color: Color(0xff020202),
+                    letterSpacing: 0,
                   ),
                 ),
-                SizedBox(height: Get.height * 0.04),
+                SizedBox(height: 36),
                 _buildInfoField('Full name', 'Victor Charles Ama'),
                 _buildInfoField('Date of birth', '28/08/2005'),
                 _buildInfoField('Gender', 'Male'),
                 _buildInfoField('Nationality', 'Nigeria'),
-                SizedBox(height: Get.height * 0.03),
+                SizedBox(height: 36),
 
                 Obx(
-                  () => TextField(
-                    controller: passwordController,
-                    obscureText: !isPasswordVisible.value,
-                    decoration: InputDecoration(
-                      hintText: 'Enter password',
-                      fillColor: Color(0xffF8F8F8),
-                      filled: true,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(color: Color(0xffF8F8F8)),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(color: Color(0xffF8F8F8)),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(color: Color(0xffF8F8F8)),
-                      ),
-                      suffixIcon: IconButton(
-                        icon: Icon(
-                          isPasswordVisible.value
-                              ? Icons.visibility
-                              : Icons.visibility_off,
-                          color: Colors.grey,
+                  () => Container(
+                    height: 70,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Color(0xffF8F8F8),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: TextField(
+                      controller: passwordController,
+                      obscureText: !isPasswordVisible.value,
+                      decoration: InputDecoration(
+                        hintText: 'Enter password',
+                        hintStyle: TextStyle(
+                          fontFamily: 'Product Sans Light',
+                          fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 18,
+                          letterSpacing: 0,
+                          color: Color(0xffBDBDBD),
                         ),
-                        onPressed: () => isPasswordVisible.toggle(),
+                        fillColor: Color(0xffF8F8F8),
+                        filled: true,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(color: Color(0xffF8F8F8)),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(color: Color(0xffF8F8F8)),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(color: Color(0xffF8F8F8)),
+                        ),
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            isPasswordVisible.value
+                                ? Icons.visibility
+                                : Icons.visibility_off,
+                            color: Colors.grey,
+                          ),
+                          onPressed: () => isPasswordVisible.toggle(),
+                        ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: Get.height * 0.01),
+                SizedBox(height: 10),
                 Text(
                   'Must be at least 8 characters',
                   style: TextStyle(
                     color: Color(0xffBDBDBD),
-                    fontSize: Get.width * 0.035,
-                    fontFamily: 'ProductSans',
+                    fontFamily: 'Product Sans Light',
+                    fontWeight: FontWeight.w300,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 15,
+                    letterSpacing: 0,
                   ),
                 ),
-                SizedBox(height: Get.height * 0.02),
+                SizedBox(height: 20),
                 Obx(
-                  () => TextField(
-                    controller: confirmPasswordController,
-                    obscureText: !isConfirmPasswordVisible.value,
-                    decoration: InputDecoration(
-                      hintText: 'Re-enter password',
-                      fillColor: Color(0xffF8F8F8),
-                      filled: true,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(color: Color(0xffF8F8F8)),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(color: Color(0xffF8F8F8)),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(color: Color(0xffF8F8F8)),
-                      ),
-                      suffixIcon: IconButton(
-                        icon: Icon(
-                          isConfirmPasswordVisible.value
-                              ? Icons.visibility
-                              : Icons.visibility_off,
-                          color: Colors.grey,
+                  () => Container(
+                    height: 70,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Color(0xffF8F8F8),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: TextField(
+                      controller: confirmPasswordController,
+                      obscureText: !isConfirmPasswordVisible.value,
+                      decoration: InputDecoration(
+                        hintText: 'Re-enter password',
+                        hintStyle: TextStyle(
+                          fontFamily: 'Product Sans Light',
+                          fontWeight: FontWeight.w300,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 18,
+                          letterSpacing: 0,
+                          color: Color(0xffBDBDBD),
                         ),
-                        onPressed: () => isConfirmPasswordVisible.toggle(),
+                        fillColor: Color(0xffF8F8F8),
+                        filled: true,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(color: Color(0xffF8F8F8)),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(color: Color(0xffF8F8F8)),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15),
+                          borderSide: BorderSide(color: Color(0xffF8F8F8)),
+                        ),
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            isConfirmPasswordVisible.value
+                                ? Icons.visibility
+                                : Icons.visibility_off,
+                            color: Colors.grey,
+                          ),
+                          onPressed: () => isConfirmPasswordVisible.toggle(),
+                        ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: Get.height * 0.01),
+                SizedBox(height: 10),
                 Text(
                   'Both passwords must match',
                   style: TextStyle(
                     color: Color(0xffBDBDBD),
-                    fontSize: Get.width * 0.035,
-                    fontFamily: 'ProductSans',
+                    fontFamily: 'Product Sans Light',
+                    fontWeight: FontWeight.w300,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 15,
+                    letterSpacing: 0,
                   ),
                 ),
 
-                SizedBox(height: Get.height * 0.06),
+                SizedBox(height: 50),
                 SizedBox(
                   width: double.infinity,
-                  height: isSmallScreen ? 50 : 70,
+                  height: 70,
                   child: Obx(
                     () => ElevatedButton(
                       onPressed:
@@ -194,12 +238,12 @@ class _NINPasswordScreenState extends State<NINPasswordScreen> {
                       child: Text(
                         'Continue',
                         style: TextStyle(
-                          fontSize: Get.width * 0.055,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans',
+                          fontWeight: FontWeight.w400,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 22,
+                          letterSpacing: 0,
                           color: Colors.white,
-                          // isButtonEnabled.value
-                          //     ? Colors.white
-                          //     : Colors.grey,
                         ),
                       ),
                     ),
@@ -223,18 +267,22 @@ class _NINPasswordScreenState extends State<NINPasswordScreen> {
             label,
             style: TextStyle(
               color: Color(0xff6B6B6B),
-              fontSize: 16.5,
-              fontFamily: 'ProductSans',
+              fontFamily: 'Product SansLight',
               fontWeight: FontWeight.w300,
+              fontStyle: FontStyle.normal,
+              fontSize: 18.0,
+              letterSpacing: 0.0,
             ),
           ),
           Text(
             value,
             style: TextStyle(
               color: Colors.black,
-              fontSize: 16.5,
-              fontFamily: 'ProductSans',
+              fontFamily: 'Product Sans Light',
               fontWeight: FontWeight.w300,
+              fontStyle: FontStyle.normal,
+              fontSize: 18.0,
+              letterSpacing: 0,
             ),
           ),
         ],

@@ -72,19 +72,22 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final steps = ['Identity', 'Selfie', 'Address'];
+    final steps = ['Identity doc', 'Selfie', '      Address'];
     final isSmallScreen = Get.height < 600;
 
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_new),
+          onPressed: () => Get.back(),
+        ),
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         elevation: 0,
-        automaticallyImplyLeading: false,
         title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(height: 5),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: List.generate(steps.length, (index) {
@@ -96,7 +99,7 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
                     style: TextStyle(
                       color: isActive ? Colors.black : Colors.grey[600],
                       fontSize: 12,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       fontWeight: isActive ? FontWeight.w400 : FontWeight.w300,
                     ),
                   ),
@@ -109,7 +112,7 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(steps.length, (index) {
-                  final isActive = index == 0;
+                  final isActive = index == 0; // Currently on first step
                   return Expanded(
                     child: Row(
                       children: [
@@ -118,6 +121,7 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
                             child: Container(
                               height: 1.5,
                               color: isActive ? Colors.black : Colors.grey[300],
+                              // padding: EdgeInsets.symmetric(horizontal: 10),
                             ),
                           ),
                         Container(
@@ -166,7 +170,9 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
             SizedBox(height: 2.5),
           ],
         ),
+        bottom: null,
       ),
+
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
@@ -176,24 +182,28 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
               Text(
                 'Check\nReadability',
                 style: TextStyle(
-                  fontSize: Get.width * 0.09,
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans',
                   fontWeight: FontWeight.w400,
-                  color: Colors.black,
-                  height: 1.2,
+                  fontStyle: FontStyle.normal,
+                  fontSize: 40,
+                  height: 1,
+                  letterSpacing: 0,
                 ),
               ),
-              SizedBox(height: 16),
+              SizedBox(height: 14),
               Text(
                 'Make sure the information is seen clearly, with no blur or glare.',
                 style: TextStyle(
-                  fontSize: 16,
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans Light',
                   fontWeight: FontWeight.w300,
-                  color: Colors.black,
+                  color: Color(0xff020202),
+                  fontStyle: FontStyle.normal,
+                  fontSize: 15,
+                  height: 1,
+                  letterSpacing: 0,
                 ),
               ),
-              SizedBox(height: 24),
+              SizedBox(height: 16),
               Expanded(
                 child: GestureDetector(
                   onTap: _takePicture,
@@ -221,10 +231,30 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
                             ),
                           )
                         else
-                          Icon(
-                            Icons.camera_alt_outlined,
-                            size: 48,
-                            color: Colors.grey[400],
+                          Positioned(
+                            left: 0,
+                            right: 0,
+                            child: Column(
+                              children: [
+                                Icon(
+                                  Icons.image_rounded,
+                                  size: 48,
+                                  color: Colors.grey[400],
+                                ),
+                                SizedBox(height: 8),
+                                Text(
+                                  'Tap to select an image',
+                                  style: TextStyle(
+                                    fontFamily: 'Product Sans',
+                                    fontWeight: FontWeight.w400,
+                                    fontStyle: FontStyle.normal,
+                                    fontSize: 20,
+                                    letterSpacing: 0,
+                                    color: Colors.grey[400],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         if (_image != null && _showPinchIcon)
                           Positioned(
@@ -251,7 +281,7 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 12,
-                                      fontFamily: 'ProductSans',
+                                      fontFamily: 'Product Sans',
                                     ),
                                   ),
                                 ],
@@ -282,8 +312,11 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
                       child: Text(
                         'Take Again',
                         style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans',
+                          fontWeight: FontWeight.w400,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 22,
+                          letterSpacing: 0,
                         ),
                       ),
                     ),
@@ -309,8 +342,11 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
                       child: Text(
                         'Submit',
                         style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans',
+                          fontWeight: FontWeight.w400,
+                          fontStyle: FontStyle.normal,
+                          fontSize: 22,
+                          letterSpacing: 0,
                         ),
                       ),
                     ),

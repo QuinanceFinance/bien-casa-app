@@ -14,7 +14,7 @@ class FeaturesSection extends StatelessWidget {
         const Text(
           'Features',
           style: TextStyle(
-            fontFamily: 'ProductSans',
+            fontFamily: 'Product Sans',
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
@@ -30,39 +30,43 @@ class FeaturesSection extends StatelessWidget {
           child: Wrap(
             spacing: 12.0,
             runSpacing: 12.0,
-            children: features.map((feature) {
-              final String name = feature['name'] ?? '';
-              final String icon = feature['icon'] ?? 'assets/icons/sqm.svg';
-              
-              return Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.grey.shade200),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    SvgPicture.asset(
-                      icon,
-                      width: 16,
-                      height: 16,
-                      color: Colors.black87,
+            children:
+                features.map((feature) {
+                  final String name = feature['name'] ?? '';
+                  final String icon = feature['icon'] ?? 'assets/icons/sqm.svg';
+
+                  return Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 8,
                     ),
-                    const SizedBox(width: 8),
-                    Text(
-                      name,
-                      style: const TextStyle(
-                        fontFamily: 'ProductSans',
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                      ),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: Colors.grey.shade200),
                     ),
-                  ],
-                ),
-              );
-            }).toList(),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        SvgPicture.asset(
+                          icon,
+                          width: 16,
+                          height: 16,
+                          color: Colors.black87,
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          name,
+                          style: const TextStyle(
+                            fontFamily: 'Product Sans',
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }).toList(),
           ),
         ),
       ],

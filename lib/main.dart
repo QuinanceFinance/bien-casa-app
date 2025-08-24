@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       title: 'BienCasa',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'ProductSans',
-        textTheme: const TextTheme().apply(fontFamily: 'ProductSans'),
+        fontFamily: 'Product Sans',
+        textTheme: const TextTheme().apply(fontFamily: 'Product Sans'),
       ),
         initialRoute: AppRoutes.SPLASH,
       getPages: AppPages.routes, 

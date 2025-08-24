@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class FeaturedPropertyCard extends StatefulWidget {
   final String imageUrl; // First image from images array
@@ -40,7 +41,7 @@ class _FeaturedPropertyCardState extends State<FeaturedPropertyCard> {
           onTap: widget.onTap,
           child: Container(
             width: double.infinity,
-            height: 280, // Reduced height to accommodate progress bar
+            height: 350,
             margin: const EdgeInsets.symmetric(
               vertical: 2,
             ), // Further reduced vertical margin
@@ -55,31 +56,40 @@ class _FeaturedPropertyCardState extends State<FeaturedPropertyCard> {
                 children: [
                   // Property image
                   Positioned.fill(
-                    child: widget.imageUrl.startsWith('http')
-                        ? Image.network(
-                            widget.imageUrl,
-                            fit: BoxFit.cover,
-                            loadingBuilder: (context, child, loadingProgress) {
-                              if (loadingProgress == null) return child;
-                              return Center(
-                                child: CircularProgressIndicator(
-                                  value: loadingProgress.expectedTotalBytes != null
-                                      ? loadingProgress.cumulativeBytesLoaded /
-                                          loadingProgress.expectedTotalBytes!
-                                      : null,
-                                ),
-                              );
-                            },
-                            errorBuilder: (context, error, stackTrace) {
-                              return Container(
-                                color: Colors.grey[300],
-                                child: const Center(
-                                  child: Icon(Icons.error, color: Colors.red),
-                                ),
-                              );
-                            },
-                          )
-                        : Image.asset(widget.imageUrl, fit: BoxFit.cover),
+                    child:
+                        widget.imageUrl.startsWith('http')
+                            ? Image.network(
+                              widget.imageUrl,
+                              fit: BoxFit.cover,
+                              loadingBuilder: (
+                                context,
+                                child,
+                                loadingProgress,
+                              ) {
+                                if (loadingProgress == null) return child;
+                                return Center(
+                                  child: CircularProgressIndicator(
+                                    value:
+                                        loadingProgress.expectedTotalBytes !=
+                                                null
+                                            ? loadingProgress
+                                                    .cumulativeBytesLoaded /
+                                                loadingProgress
+                                                    .expectedTotalBytes!
+                                            : null,
+                                  ),
+                                );
+                              },
+                              errorBuilder: (context, error, stackTrace) {
+                                return Container(
+                                  color: Colors.grey[300],
+                                  child: const Center(
+                                    child: Icon(Icons.error, color: Colors.red),
+                                  ),
+                                );
+                              },
+                            )
+                            : Image.asset(widget.imageUrl, fit: BoxFit.cover),
                   ),
                   // Dark overlay for text readability
                   Positioned.fill(
@@ -141,9 +151,12 @@ class _FeaturedPropertyCardState extends State<FeaturedPropertyCard> {
                       'Featured',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: 'ProductSans',
+                        fontFamily: 'Product Sans Light',
+                        fontWeight: FontWeight.w300,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 14,
+                        height: 1.0,
+                        letterSpacing: 0.0,
                       ),
                     ),
                   ),
@@ -171,10 +184,13 @@ class _FeaturedPropertyCardState extends State<FeaturedPropertyCard> {
                         Text(
                           widget.name,
                           style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 22,
+                            fontFamily: 'Product Sans',
                             fontWeight: FontWeight.bold,
-                            fontFamily: 'ProductSans',
+                            fontStyle: FontStyle.normal,
+                            fontSize: 21,
+                            height: 1,
+                            letterSpacing: 0,
+                            color: Colors.white,
                           ),
                         ),
                         const SizedBox(height: 6),
@@ -191,9 +207,13 @@ class _FeaturedPropertyCardState extends State<FeaturedPropertyCard> {
                               child: Text(
                                 widget.address,
                                 style: const TextStyle(
-                                  color: Colors.white,
+                                  fontFamily: 'Product Sans Light',
+                                  fontWeight: FontWeight.w300,
+                                  fontStyle: FontStyle.normal,
                                   fontSize: 14,
-                                  fontFamily: 'ProductSans',
+                                  color: Colors.white,
+                                  height: 1,
+                                  letterSpacing: 0,
                                 ),
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -247,14 +267,28 @@ class _FeaturedPropertyCardState extends State<FeaturedPropertyCard> {
         color: Colors.black.withOpacity(0.6),
         borderRadius: BorderRadius.circular(20),
       ),
-      child: Text(
-        text,
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 13,
-          fontWeight: FontWeight.normal,
-          fontFamily: 'ProductSans',
-        ),
+      child: Row(
+        children: [
+          if (isPrice)
+            SvgPicture.asset(
+              'assets/icons/naira.svg',
+              width: 13,
+              height: 13,
+              color: Colors.white,
+            ),
+          const SizedBox(width: 6),
+          Text(
+            text,
+            style: const TextStyle(
+              fontFamily: 'Product Sans',
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.normal,
+              fontSize: 13,
+              color: Colors.white,
+              letterSpacing: 0,
+            ),
+          ),
+        ],
       ),
     );
   }

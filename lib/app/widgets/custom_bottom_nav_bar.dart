@@ -15,16 +15,8 @@ class CustomBottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       constraints: BoxConstraints(minHeight: 76),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        // boxShadow: [
-        //   BoxShadow(
-        //     color: Colors.black.withOpacity(0.1),
-        //     blurRadius: 1,
-        //     offset: const Offset(0, -5),
-        //   ),
-        // ],
-      ),
+      decoration: BoxDecoration(color: Colors.white),
+      padding: const EdgeInsets.only(top: 5),
       child: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: onTap,
@@ -36,7 +28,7 @@ class CustomBottomNavBar extends StatelessWidget {
         showUnselectedLabels: true,
         selectedLabelStyle: const TextStyle(
           fontSize: 12,
-          fontFamily: 'ProductSans',
+          fontFamily: 'Product Sans',
         ),
         unselectedLabelStyle: const TextStyle(fontSize: 12),
         elevation: 0,

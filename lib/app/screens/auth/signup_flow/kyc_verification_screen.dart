@@ -1,5 +1,6 @@
 import 'package:bien_casa/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../../controllers/auth_controller.dart';
 
@@ -9,7 +10,7 @@ class KYCVerificationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<AuthController>();
-    final steps = ['Identity', 'Selfie', 'Address'];
+    final steps = ['Identity doc', 'Selfie', '      Address'];
     final isSmallScreen = Get.height < 600;
 
     return Scaffold(
@@ -32,7 +33,7 @@ class KYCVerificationScreen extends StatelessWidget {
                     style: TextStyle(
                       color: isActive ? Colors.black : Colors.grey[600],
                       fontSize: 12,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       fontWeight: isActive ? FontWeight.w400 : FontWeight.w300,
                     ),
                   ),
@@ -54,6 +55,7 @@ class KYCVerificationScreen extends StatelessWidget {
                             child: Container(
                               height: 1.5,
                               color: isActive ? Colors.black : Colors.grey[300],
+                              // padding: EdgeInsets.symmetric(horizontal: 10),
                             ),
                           ),
                         Container(
@@ -104,6 +106,7 @@ class KYCVerificationScreen extends StatelessWidget {
         ),
         bottom: null,
       ),
+
       body: Stack(
         children: [
           Column(
@@ -140,11 +143,15 @@ class KYCVerificationScreen extends StatelessWidget {
                       Text(
                         'First, let\'s get\nto know you',
                         style: TextStyle(
-                          fontSize: Get.width * 0.09,
-                          fontFamily: 'ProductSans',
+                          fontSize: 40,
+                          fontFamily: 'Product SansBlack',
                           fontWeight: FontWeight.w900,
+                          fontStyle: FontStyle.normal,
                           color: Colors.black,
-                          height: 1.2,
+                          height: 1,
+                          leadingDistribution:
+                              TextLeadingDistribution.proportional,
+                          letterSpacing: 0,
                         ),
                       ),
                       SizedBox(height: Get.height * 0.02),
@@ -152,7 +159,7 @@ class KYCVerificationScreen extends StatelessWidget {
                         text: TextSpan(
                           style: TextStyle(
                             fontSize: 15,
-                            fontFamily: 'ProductSans',
+                            fontFamily: 'Product Sans',
                             fontWeight: FontWeight.w300,
                             color: Colors.black,
                             height: 1.5,
@@ -181,17 +188,23 @@ class KYCVerificationScreen extends StatelessWidget {
                           Text(
                             "Most people finish this step under 2 minutes",
                             style: TextStyle(
+                              fontFamily: 'Product Sans Light',
                               color: Color(0xff6B6B6B),
-                              fontSize: 14,
+                              fontSize: 15,
                               fontWeight: FontWeight.w300,
+                              fontStyle: FontStyle.normal,
+                              leadingDistribution:
+                                  TextLeadingDistribution.proportional,
+                              letterSpacing: 0,
+                              height: 1,
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: Get.height * 0.03),
+                      SizedBox(height: 20),
                       SizedBox(
                         width: double.infinity,
-                        height: Get.height < 600 ? 50 : 70,
+                        height: 70,
                         child: ElevatedButton(
                           onPressed: () => _showDocumentSelection(),
                           style: ElevatedButton.styleFrom(
@@ -201,16 +214,22 @@ class KYCVerificationScreen extends StatelessWidget {
                             ),
                           ),
                           child: Text(
-                            'Select Document',
+                            'Choose document',
                             style: TextStyle(
-                              fontSize: Get.width * 0.055,
-                              fontFamily: 'ProductSans',
+                              fontSize: 22,
+                              fontFamily: 'Product Sans',
+                              fontWeight: FontWeight.w400,
                               color: Colors.white,
+                              fontStyle: FontStyle.normal,
+                              leadingDistribution:
+                                  TextLeadingDistribution.proportional,
+                              height: 1.818,
+                              letterSpacing: 0,
                             ),
                           ),
                         ),
                       ),
-                      SizedBox(height: Get.height * 0.02),
+                      SizedBox(height: 50),
                     ],
                   ),
                 ),
@@ -252,10 +271,11 @@ class KYCVerificationScreen extends StatelessWidget {
         const SizedBox(height: 8),
         Text(
           title,
+          textAlign: TextAlign.center,
           style: TextStyle(
             color: isActive ? Colors.black : Colors.grey[600],
             fontSize: 12,
-            fontFamily: 'ProductSans',
+            fontFamily: 'Product Sans',
             fontWeight: isActive ? FontWeight.w600 : FontWeight.w400,
           ),
         ),
@@ -281,31 +301,35 @@ class KYCVerificationScreen extends StatelessWidget {
             Text(
               'Choose\nDocument Type',
               style: TextStyle(
-                fontSize: Get.width * 0.09,
-                fontFamily: 'ProductSans',
+                fontSize: 40,
+                fontFamily: 'Product Sans',
                 fontWeight: FontWeight.w400,
-                color: Colors.black,
-                height: 1.2,
+                fontStyle: FontStyle.normal,
+                leadingDistribution: TextLeadingDistribution.proportional,
+                height: 1,
+                letterSpacing: 0,
               ),
             ),
             SizedBox(height: Get.height * 0.02),
             Text(
               'Make sure the document includes a clear picture of your face',
               style: TextStyle(
-                fontFamily: 'ProductSans',
-                fontSize: Get.width * 0.04,
+                fontFamily: 'Product Sans Light',
+                fontSize: 15,
                 fontWeight: FontWeight.w300,
-                color: Colors.black,
-                height: 1.5,
+                fontStyle: FontStyle.normal,
+                leadingDistribution: TextLeadingDistribution.proportional,
+                height: 1,
+                letterSpacing: 0,
               ),
             ),
             SizedBox(height: Get.height * 0.03),
             Center(
-              child: Image.asset(
-                'assets/icons/Vector.png',
+              child: SvgPicture.asset(
+                'assets/icons/Vector.svg',
                 alignment: Alignment.center,
-                width: 150,
-                height: 150,
+                width: 223.28598022460938,
+                height: 211.49810791015625,
                 fit: BoxFit.contain,
               ),
             ),
@@ -313,17 +337,17 @@ class KYCVerificationScreen extends StatelessWidget {
             _buildDocumentOption(
               'International Passport',
               'International',
-              'assets/icons/passport icon.png',
+              'assets/icons/passport icon.svg',
               () => Get.toNamed(AppRoutes.PASSPORT_VERIFICATION),
             ),
             SizedBox(height: Get.height * 0.015),
             _buildDocumentOption(
               'National ID',
               'National',
-              'assets/icons/ID icon.png',
+              'assets/icons/ID icon.svg',
               () => Get.toNamed(AppRoutes.NIN_VERIFICATION),
             ),
-            SizedBox(height: Get.height * 0.02),
+            SizedBox(height: 50),
           ],
         ),
       ),
@@ -355,12 +379,7 @@ class KYCVerificationScreen extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(Get.width * 0.02),
               decoration: BoxDecoration(),
-              child: Image.asset(
-                iconPath,
-                width: 24,
-                height: 24,
-                fit: BoxFit.contain,
-              ),
+              child: SvgPicture.asset(iconPath, fit: BoxFit.contain),
             ),
             SizedBox(width: Get.width * 0.04),
             Expanded(
@@ -371,7 +390,7 @@ class KYCVerificationScreen extends StatelessWidget {
                     title,
                     style: TextStyle(
                       fontSize: Get.width * 0.045,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -380,7 +399,7 @@ class KYCVerificationScreen extends StatelessWidget {
                     subtitle,
                     style: TextStyle(
                       fontSize: Get.width * 0.035,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       fontWeight: FontWeight.w300,
                       color: Colors.grey[600],
                     ),

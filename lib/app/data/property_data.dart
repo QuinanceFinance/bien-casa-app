@@ -3,7 +3,7 @@ class PropertyData {
   static final Map<String, dynamic> defaultProperty = {
     'name': 'Blue Ocean Estate',
     'address': '101 Jesse Jackson Street, Abuja 798302',
-    'price': '₦110,000,000',
+    'price': '110,000,000',
     'images': [
       'https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1000',
       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000',
@@ -48,7 +48,7 @@ class PropertyData {
     {
       'name': 'Green Valley Estate',
       'address': '45 Ahmadu Bello Way, Lagos',
-      'price': '₦85,000,000',
+      'price': '85,000,000',
       'images': [
         'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1000',
         'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000',
@@ -86,7 +86,7 @@ class PropertyData {
       {
         'name': 'Lekki Paradise',
         'address': '12 Admiralty Way, Lekki Phase 1',
-        'price': '₦120,000,000',
+        'price': '120,000,000',
         'images': [
           'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?q=80&w=1000',
           'https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=1000',

@@ -5,7 +5,7 @@ import 'package:bien_casa/app/screens/auth/signup_flow/kyc_success_screen.dart';
 import 'package:bien_casa/app/screens/auth/forgot_password_flow/reset_password_screen.dart';
 import 'package:bien_casa/app/screens/auth/signin_screen.dart';
 import 'package:bien_casa/app/screens/auth/login_flow/signin_otp_verification_screen.dart';
-import 'package:bien_casa/app/screens/user/user_home.dart';
+import 'package:bien_casa/app/screens/user/user_home_screen.dart';
 import 'package:camera/camera.dart';
 import 'package:get/get.dart';
 import '../screens/splash_screen.dart';
@@ -21,15 +21,18 @@ import '../screens/auth/signup_flow/check_readability_screen.dart';
 import '../screens/auth/signup_flow/check_quality_screen.dart';
 import '../screens/auth/signup_flow/address_verification_screen.dart';
 import '../screens/user/widgets/home/search/search_screen.dart';
-import '../screens/user/widgets/home/property/featured_properties_screen.dart';
+// import '../screens/user/widgets/home/property/featured_properties_screen.dart';
 import '../screens/user/widgets/home/property/recently_added_screen.dart';
 import '../screens/user/widgets/home/property/location_properties_screen.dart';
 import '../screens/user/widgets/home/property/property_detail_screen.dart';
 import '../screens/auth/signup_flow/selfie_screen.dart';
 import '../screens/auth/signup_flow/map_address_screen.dart';
+import '../screens/user/map_screen.dart';
+import '../screens/user/flatmate_screen.dart';
 import '../bindings/welcome_binding.dart';
 import '../bindings/onboarding_binding.dart';
 import '../bindings/user_home_binding.dart';
+import '../bindings/flatmate_binding.dart';
 import 'app_routes.dart';
 
 class AppPages {
@@ -139,7 +142,7 @@ class AppPages {
       binding: UserHomeBinding(),
       transition: Transition.rightToLeft,
     ),
-    
+
     // New property-related screens
     GetPage(
       name: AppRoutes.SEARCH,
@@ -147,12 +150,12 @@ class AppPages {
       binding: UserHomeBinding(),
       transition: Transition.rightToLeft,
     ),
-    GetPage(
-      name: AppRoutes.FEATURED_PROPERTIES,
-      page: () => FeaturedPropertiesScreen(),
-      binding: UserHomeBinding(),
-      transition: Transition.rightToLeft,
-    ),
+    // GetPage(
+    //   name: AppRoutes.FEATURED_PROPERTIES,
+    //   page: () => FeaturedPropertiesScreen(),
+    //   binding: UserHomeBinding(),
+    //   transition: Transition.rightToLeft,
+    // ),
     GetPage(
       name: AppRoutes.RECENTLY_ADDED,
       page: () => RecentlyAddedScreen(),
@@ -168,6 +171,17 @@ class AppPages {
     GetPage(
       name: AppRoutes.PROPERTY_DETAIL,
       page: () => PropertyDetailScreen(),
+      transition: Transition.rightToLeft,
+    ),
+    GetPage(
+      name: AppRoutes.MAP,
+      page: () => const MapScreen(),
+      transition: Transition.rightToLeft,
+    ),
+    GetPage(
+      name: AppRoutes.FLATMATE,
+      page: () => const FlatmateScreen(),
+      binding: FlatmateBinding(),
       transition: Transition.rightToLeft,
     ),
   ];

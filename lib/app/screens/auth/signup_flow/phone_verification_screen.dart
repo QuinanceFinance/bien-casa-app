@@ -32,13 +32,11 @@ class PhoneVerificationScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: screenWidth * 0.06,
-            vertical: isSmallScreen ? screenHeight * 0.01 : screenHeight * 0.02,
-          ),
+          padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.06),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(height: screenHeight * 0.02),
               // Logo
               Container(
                 padding: EdgeInsets.symmetric(vertical: screenWidth * 0.01),
@@ -58,8 +56,8 @@ class PhoneVerificationScreen extends StatelessWidget {
               Text(
                 'Sign up',
                 style: TextStyle(
-                  fontSize: isSmallScreen ? 30 : 40,
-                  fontFamily: 'ProductSans',
+                  fontSize: 40,
+                  fontFamily: 'Product Sans',
                   fontWeight: FontWeight.w900,
                   color: Colors.black,
                   height: 1.2,
@@ -72,10 +70,9 @@ class PhoneVerificationScreen extends StatelessWidget {
               Text(
                 'to continue, kindly enter an active phone number\nfor the best experience',
                 style: TextStyle(
-                  fontSize:
-                      isSmallScreen ? screenWidth * 0.035 : screenWidth * 0.04,
+                  fontSize: 15,
                   fontWeight: FontWeight.w300,
-                  fontFamily: 'ProductSans',
+                  fontFamily: 'Product Sans',
                   color: Colors.black,
                   height: 1.5,
                 ),
@@ -122,7 +119,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                             '+234',
                             style: TextStyle(
                               fontSize: 18,
-                              fontFamily: 'ProductSans',
+                              fontFamily: 'Product Sans',
                               color: Colors.black,
                             ),
                           ),
@@ -137,7 +134,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                         keyboardType: TextInputType.phone,
                         style: TextStyle(
                           fontSize: 18,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans',
                         ),
                         decoration: InputDecoration(
                           border: InputBorder.none,
@@ -145,7 +142,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                           hintStyle: TextStyle(
                             color: Colors.black26,
                             fontSize: 18,
-                            fontFamily: 'ProductSans',
+                            fontFamily: 'Product Sans',
                           ),
                           contentPadding:
                               isSmallScreen
@@ -192,7 +189,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                                 'Enter Referral Code',
                                 style: TextStyle(
                                   fontSize: 24,
-                                  fontFamily: 'ProductSans',
+                                  fontFamily: 'Product Sans',
                                   fontWeight: FontWeight.w900,
                                   color: Colors.black,
                                 ),
@@ -211,7 +208,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                                   controller: controller.referralCodeController,
                                   style: TextStyle(
                                     fontSize: 18,
-                                    fontFamily: 'ProductSans',
+                                    fontFamily: 'Product Sans',
                                   ),
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
@@ -219,7 +216,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                                     hintStyle: TextStyle(
                                       color: Colors.black26,
                                       fontSize: 18,
-                                      fontFamily: 'ProductSans',
+                                      fontFamily: 'Product Sans',
                                     ),
                                   ),
                                   onChanged:
@@ -251,7 +248,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                                       'Submit',
                                       style: TextStyle(
                                         fontSize: 20,
-                                        fontFamily: 'ProductSans',
+                                        fontFamily: 'Product Sans',
                                         fontWeight: FontWeight.w400,
                                         color: Colors.white,
                                       ),
@@ -275,7 +272,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: isSmallScreen ? 16 : 18,
                           fontWeight: FontWeight.w300,
-                          fontFamily: 'ProductSans',
+                          fontFamily: 'Product Sans',
                           color:
                               controller.isReferralCodeValid.value
                                   ? Color(0xff29BCA2)
@@ -284,7 +281,11 @@ class PhoneVerificationScreen extends StatelessWidget {
                       ),
                       if (controller.isReferralCodeValid.value) ...[
                         SizedBox(width: 8),
-                        Icon(Icons.check_circle, color: Color(0xff29BCA2), size: 20),
+                        Icon(
+                          Icons.check_circle,
+                          color: Color(0xff29BCA2),
+                          size: 20,
+                        ),
                       ],
                     ],
                   ),
@@ -314,7 +315,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                       'Continue',
                       style: TextStyle(
                         fontSize: isSmallScreen ? 20 : 22,
-                        fontFamily: 'ProductSans',
+                        fontFamily: 'Product Sans',
                         fontWeight: FontWeight.w400,
                         color: Colors.white,
                       ),
@@ -323,14 +324,11 @@ class PhoneVerificationScreen extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(
-                height:
-                    isSmallScreen ? screenHeight * 0.015 : screenHeight * 0.02,
-              ),
+              SizedBox(height: 30),
 
               // Sign In Option
               Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'Have an account? ',
@@ -339,7 +337,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                           isSmallScreen
                               ? screenWidth * 0.035
                               : screenWidth * 0.04,
-                      fontFamily: 'ProductSans',
+                      fontFamily: 'Product Sans',
                       fontWeight: FontWeight.w300,
                       color: Colors.black,
                     ),
@@ -353,7 +351,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                             isSmallScreen
                                 ? screenWidth * 0.035
                                 : screenWidth * 0.04,
-                        fontFamily: 'ProductSans',
+                        fontFamily: 'Product Sans',
                         fontWeight: FontWeight.w900,
                         color: Colors.black,
                       ),
@@ -362,63 +360,59 @@ class PhoneVerificationScreen extends StatelessWidget {
                 ],
               ),
 
-              SizedBox(
-                height:
-                    isSmallScreen ? screenHeight * 0.03 : screenHeight * 0.04,
-              ),
+              SizedBox(height: 35),
 
-              // Terms and Privacy
-              // Terms and Privacy
-              Padding(
-                padding: EdgeInsets.only(
-                  bottom: Get.height * 0.02,
-                  top: Get.height * 0.02,
-                ),
-                child: Text.rich(
-                  TextSpan(
-                    text: 'By using Bien Casa you agree to our ',
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontFamily: 'ProductSans',
-                      color: Colors.black54,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: 'Term of Service',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w900,
-                          color: Colors.black,
-                        ),
-                        recognizer:
-                            TapGestureRecognizer()
-                              ..onTap =
-                                  () => Get.to(
-                                    () => const TermsOfServiceScreen(),
-                                  ),
-                      ),
-                      TextSpan(text: ' and '),
-                      TextSpan(
-                        text: 'Privacy Policy',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w900,
-                          color: Colors.black,
-                        ),
-                        recognizer:
-                            TapGestureRecognizer()
-                              ..onTap =
-                                  () =>
-                                      Get.to(() => const PrivacyPolicyScreen()),
-                      ),
-                    ],
+              Text.rich(
+                TextSpan(
+                  text: 'By using Bien Casa you agree to our ',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontFamily: 'Product Sans Light',
+                    fontWeight: FontWeight.w300,
+                    fontStyle: FontStyle.normal,
+                    leadingDistribution: TextLeadingDistribution.proportional,
+                    letterSpacing: 0,
                   ),
-                  textAlign: TextAlign.center,
+                  children: [
+                    TextSpan(
+                      text: 'Term of Service',
+                      style: TextStyle(
+                        fontFamily: 'Product Sans',
+                        fontWeight: FontWeight.w700,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 15,
+                        leadingDistribution:
+                            TextLeadingDistribution.proportional,
+                        letterSpacing: 0,
+                      ),
+                      recognizer:
+                          TapGestureRecognizer()
+                            ..onTap =
+                                () =>
+                                    Get.to(() => const TermsOfServiceScreen()),
+                    ),
+                    TextSpan(text: ' and '),
+                    TextSpan(
+                      text: 'Privacy Policy',
+                      style: TextStyle(
+                        fontFamily: 'Product Sans',
+                        fontWeight: FontWeight.w700,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 15,
+                        leadingDistribution:
+                            TextLeadingDistribution.proportional,
+                        letterSpacing: 0,
+                      ),
+                      recognizer:
+                          TapGestureRecognizer()
+                            ..onTap =
+                                () => Get.to(() => const PrivacyPolicyScreen()),
+                    ),
+                  ],
                 ),
+                textAlign: TextAlign.center,
               ),
-
-              SizedBox(
-                height:
-                    isSmallScreen ? screenHeight * 0.01 : screenHeight * 0.02,
-              ),
+              SizedBox(height: 30),
             ],
           ),
         ),
