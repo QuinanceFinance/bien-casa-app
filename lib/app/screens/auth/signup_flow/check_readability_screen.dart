@@ -58,14 +58,14 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
         Get.snackbar(
           'Error',
           'Failed to take picture',
-          snackPosition: SnackPosition.BOTTOM,
+          snackPosition: SnackPosition.TOP,
         );
       }
     } else {
       Get.snackbar(
         'Permission Denied',
         'Please grant camera permission to take a picture',
-        snackPosition: SnackPosition.BOTTOM,
+        snackPosition: SnackPosition.TOP,
       );
     }
   }

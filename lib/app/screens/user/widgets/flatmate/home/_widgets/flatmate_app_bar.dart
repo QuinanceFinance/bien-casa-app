@@ -12,26 +12,29 @@ class FlatmateAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           // Menu icon
-          GestureDetector(
-            onTap: () {},
-            child: SvgPicture.asset(
-              'assets/icons/filter icon.svg',
-              width: 23,
-              height: 23,
-              colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn),
-            ),
-          ),
+          Row(
+            children: [
+              GestureDetector(
+                onTap: () {},
+                child: SvgPicture.asset(
+                  'assets/icons/filter icon.svg',
+                  width: 23,
+                  height: 23,
+                  colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn),
+                ),
+              ),
 
-          SizedBox(width: 10),
-
-          GestureDetector(
-            onTap: () {},
-            child: SvgPicture.asset(
-              'assets/icons/swipe.svg',
-              width: 24,
-              height: 24,
-              colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn),
-            ),
+              SizedBox(width: 20),
+              GestureDetector(
+                onTap: () {},
+                child: SvgPicture.asset(
+                  'assets/icons/swipe.svg',
+                  width: 24,
+                  height: 24,
+                  colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn),
+                ),
+              ),
+            ],
           ),
 
           // Action icons

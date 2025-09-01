@@ -109,7 +109,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
         Get.snackbar(
           'Location Error',
           e.toString(),
-          snackPosition: SnackPosition.BOTTOM,
+          snackPosition: SnackPosition.TOP,
           backgroundColor: Colors.red,
           colorText: Colors.white,
           duration: const Duration(seconds: 5),
@@ -143,7 +143,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
       Get.snackbar(
         'Error',
         'Failed to get address: $e',
-        snackPosition: SnackPosition.BOTTOM,
+        snackPosition: SnackPosition.TOP,
         backgroundColor: Colors.red,
         colorText: Colors.white,
       );
@@ -218,7 +218,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
         Get.snackbar(
           'Permission Denied',
           'Camera permission is required to take a picture',
-          snackPosition: SnackPosition.BOTTOM,
+          snackPosition: SnackPosition.TOP,
           backgroundColor: Colors.red,
           colorText: Colors.white,
         );
@@ -227,7 +227,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
       Get.snackbar(
         'Error',
         'Failed to take picture: $e',
-        snackPosition: SnackPosition.BOTTOM,
+        snackPosition: SnackPosition.TOP,
         backgroundColor: Colors.red,
         colorText: Colors.white,
       );
@@ -873,7 +873,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
       Get.snackbar(
         'Error',
         'Failed to locate address: $e',
-        snackPosition: SnackPosition.BOTTOM,
+        snackPosition: SnackPosition.TOP,
         backgroundColor: Colors.red,
         colorText: Colors.white,
       );

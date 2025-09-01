@@ -179,7 +179,7 @@ class SignInOtpVerificationScreen extends StatelessWidget {
         Get.snackbar(
           'Error',
           'Invalid OTP code',
-          snackPosition: SnackPosition.BOTTOM,
+          snackPosition: SnackPosition.TOP,
         );
       }
     }

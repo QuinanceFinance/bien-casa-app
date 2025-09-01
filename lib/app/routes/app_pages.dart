@@ -29,6 +29,7 @@ import '../screens/auth/signup_flow/selfie_screen.dart';
 import '../screens/auth/signup_flow/map_address_screen.dart';
 import '../screens/user/map_screen.dart';
 import '../screens/user/flatmate_screen.dart';
+import '../screens/user/widgets/flatmate/home/_pages/match_detail_screen.dart';
 import '../bindings/welcome_binding.dart';
 import '../bindings/onboarding_binding.dart';
 import '../bindings/user_home_binding.dart';
@@ -182,6 +183,11 @@ class AppPages {
       name: AppRoutes.FLATMATE,
       page: () => const FlatmateScreen(),
       binding: FlatmateBinding(),
+      transition: Transition.rightToLeft,
+    ),
+    GetPage(
+      name: AppRoutes.MATCH_DETAIL,
+      page: () => MatchDetailScreen(initialData: Get.arguments),
       transition: Transition.rightToLeft,
     ),
   ];

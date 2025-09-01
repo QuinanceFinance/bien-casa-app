@@ -289,7 +289,7 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                                           Get.snackbar(
                                             'Error',
                                             'Failed to get current location: $e',
-                                            snackPosition: SnackPosition.BOTTOM,
+                                            snackPosition: SnackPosition.TOP,
                                             backgroundColor: Colors.red,
                                             colorText: Colors.white,
                                           );
@@ -298,7 +298,7 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                                         Get.snackbar(
                                           'Permission Denied',
                                           'Location permission is required to get your current location',
-                                          snackPosition: SnackPosition.BOTTOM,
+                                          snackPosition: SnackPosition.TOP,
                                           backgroundColor: Colors.red,
                                           colorText: Colors.white,
                                         );

@@ -138,7 +138,7 @@ class AuthController extends GetxController {
         Get.snackbar(
           'Error',
           'Invalid OTP code',
-           snackPosition: SnackPosition.TOP,
+          snackPosition: SnackPosition.TOP,
         );
       }
     }
@@ -149,7 +149,7 @@ class AuthController extends GetxController {
     Get.snackbar(
       'OTP Sent',
       'A new OTP has been sent to your phone number',
-       snackPosition: SnackPosition.TOP,
+      snackPosition: SnackPosition.TOP,
     );
     Get.toNamed(AppRoutes.REST_PASSWORD);
   }
@@ -163,7 +163,7 @@ class AuthController extends GetxController {
     Get.snackbar(
       'Coming Soon',
       'Home Owner registration will be available soon!',
-       snackPosition: SnackPosition.TOP,
+      snackPosition: SnackPosition.TOP,
     );
     // Uncomment when feature is ready
     // selectRole('Home Owner');
@@ -214,7 +214,7 @@ class AuthController extends GetxController {
       Get.snackbar(
         'Error',
         'Please enter a valid referral code',
-         snackPosition: SnackPosition.TOP,
+        snackPosition: SnackPosition.TOP,
       );
     }
   }

@@ -31,15 +31,15 @@ class _HeartIconState extends State<HeartIcon> {
         setState(() {
           isFavorite = !isFavorite;
         });
-        
+
         // Show feedback to user
         Get.snackbar(
           'Favorite',
           isFavorite ? 'Added to favorites' : 'Removed from favorites',
-          snackPosition: SnackPosition.BOTTOM,
+          snackPosition: SnackPosition.TOP,
           duration: const Duration(seconds: 1),
         );
-        
+
         // Call the original onTap if provided
         if (widget.onTap != null) {
           widget.onTap!();
@@ -49,15 +49,17 @@ class _HeartIconState extends State<HeartIcon> {
         padding: EdgeInsets.all(widget.padding),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: widget.isWhite 
-              ? Colors.white.withOpacity(0.9) 
-              : Colors.black.withOpacity(0.6),
+          color:
+              widget.isWhite
+                  ? Colors.white.withOpacity(0.9)
+                  : Colors.black.withOpacity(0.6),
         ),
         child: Icon(
           isFavorite ? Icons.favorite : Icons.favorite_border_rounded,
-          color: isFavorite 
-              ? Colors.red 
-              : (widget.isWhite ? Colors.black : Colors.white),
+          color:
+              isFavorite
+                  ? Colors.red
+                  : (widget.isWhite ? Colors.black : Colors.white),
           size: widget.iconSize,
         ),
       ),

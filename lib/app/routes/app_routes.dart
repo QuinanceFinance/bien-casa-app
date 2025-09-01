@@ -34,4 +34,5 @@ abstract class AppRoutes {
   static const PROPERTY_DETAIL = '/property-detail';
   static const MAP = '/map';
   static const FLATMATE = '/flatmate';
+  static const MATCH_DETAIL = '/match-detail';
 }

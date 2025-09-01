@@ -74,7 +74,7 @@ class PropertyPrice extends StatelessWidget {
                     Get.snackbar(
                       'Make an Offer',
                       'Opening offer form',
-                      snackPosition: SnackPosition.BOTTOM,
+                      snackPosition: SnackPosition.TOP,
                     );
                   },
                   child: const Text(
@@ -129,7 +129,7 @@ class PropertyPrice extends StatelessWidget {
               Get.snackbar(
                 'Schedule Inspection',
                 'Opening inspection booking',
-                snackPosition: SnackPosition.BOTTOM,
+                snackPosition: SnackPosition.TOP,
               );
             },
             child: const Text(

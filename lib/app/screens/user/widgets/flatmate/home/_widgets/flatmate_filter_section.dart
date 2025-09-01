@@ -150,6 +150,7 @@ class _FlatmateFilterSectionState extends State<FlatmateFilterSection> {
       ),
       builder:
           (context) => Container(
+            color: Colors.white,
             padding: const EdgeInsets.symmetric(vertical: 20),
             child: Column(
               mainAxisSize: MainAxisSize.min,

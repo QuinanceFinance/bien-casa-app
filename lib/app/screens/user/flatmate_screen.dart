@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'widgets/flatmate/survey/flatmate_survey.dart';
-import 'widgets/flatmate/home/flatmate_app_bar.dart';
-import 'widgets/flatmate/home/flatmate_filter_section.dart';
-import 'widgets/flatmate/home/match_card_section.dart';
+import 'widgets/flatmate/home/_widgets/flatmate_app_bar.dart';
+import 'widgets/flatmate/home/_widgets/flatmate_filter_section.dart';
+import 'widgets/flatmate/home/_widgets/match_card_section.dart';
 import '../../widgets/custom_bottom_nav_bar.dart';
 
 class FlatmateScreen extends StatefulWidget {

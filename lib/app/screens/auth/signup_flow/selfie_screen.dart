@@ -20,14 +20,14 @@ class SelfieScreen extends StatelessWidget {
         Get.snackbar(
           'Error',
           'Failed to take selfie',
-          snackPosition: SnackPosition.BOTTOM,
+          snackPosition: SnackPosition.TOP,
         );
       }
     } else {
       Get.snackbar(
         'Permission Denied',
         'Please grant camera permission to take a selfie',
-        snackPosition: SnackPosition.BOTTOM,
+        snackPosition: SnackPosition.TOP,
       );
     }
   }

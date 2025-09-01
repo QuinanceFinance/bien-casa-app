@@ -1,6 +1,36 @@
 import 'package:get/get.dart';
 
 class FlatmateController extends GetxController {
+  // Current index of the top card
+  final currentIndex = 0.obs;
+
+  // Get the current card data
+  Map<String, dynamic> get currentCard =>
+      recommendedFlatmates[currentIndex.value];
+
+  // Check if there are more cards
+  bool get hasMoreCards => currentIndex.value < recommendedFlatmates.length - 1;
+
+  // Get the tilt angle based on card position
+  double getCardTilt(int index) {
+    // Convert degrees to radians for Flutter's rotation
+    return index % 2 == 0 ? 0.1316 : -0.105; // -6.02° and 7.54° in radians
+  }
+
+  // Navigate to next card
+  void nextCard() {
+    if (hasMoreCards) {
+      currentIndex.value++;
+    }
+  }
+
+  // Navigate to previous card
+  void previousCard() {
+    if (currentIndex.value > 0) {
+      currentIndex.value--;
+    }
+  }
+
   // Mock data for recommended flatmates
   final recommendedFlatmates = <Map<String, dynamic>>[
     {
@@ -13,7 +43,8 @@ class FlatmateController extends GetxController {
       'religion': 'Christian',
       'income': '₦400k - ₦600k/yr',
       'interests': ['Reading', 'Fitness', 'Travel'],
-      'bio': 'Medical professional looking for a clean and organized living space. I work long hours but enjoy socializing on weekends.',
+      'bio':
+          'Medical professional looking for a clean and organized living space. I work long hours but enjoy socializing on weekends.',
       'moveInDate': 'September 1',
       'preferredRent': '₦250k - ₦350k',
       'smokingPreference': 'Non-smoker',
@@ -29,7 +60,8 @@ class FlatmateController extends GetxController {
       'religion': 'Christian',
       'income': '₦350k - ₦500k/yr',
       'interests': ['Cooking', 'Yoga', 'Movies'],
-      'bio': 'Finance professional who enjoys a balanced lifestyle. Looking for a roommate who appreciates cleanliness and occasional shared meals.',
+      'bio':
+          'Finance professional who enjoys a balanced lifestyle. Looking for a roommate who appreciates cleanliness and occasional shared meals.',
       'moveInDate': 'August 15',
       'preferredRent': '₦200k - ₦300k',
       'smokingPreference': 'Non-smoker',
@@ -45,7 +77,8 @@ class FlatmateController extends GetxController {
       'religion': 'Muslim',
       'income': '₦500k - ₦700k/yr',
       'interests': ['Coding', 'Gaming', 'Hiking'],
-      'bio': 'Tech professional who works from home most days. Looking for a quiet space with good internet and respectful roommates.',
+      'bio':
+          'Tech professional who works from home most days. Looking for a quiet space with good internet and respectful roommates.',
       'moveInDate': 'September 15',
       'preferredRent': '₦300k - ₦400k',
       'smokingPreference': 'Non-smoker',
@@ -61,7 +94,8 @@ class FlatmateController extends GetxController {
       'religion': 'Muslim',
       'income': '₦300k - ₦450k/yr',
       'interests': ['Photography', 'Travel', 'Cooking'],
-      'bio': 'Creative marketing professional who loves to explore new places. Looking for a roommate who is open-minded and respectful.',
+      'bio':
+          'Creative marketing professional who loves to explore new places. Looking for a roommate who is open-minded and respectful.',
       'moveInDate': 'August 30',
       'preferredRent': '₦200k - ₦300k',
       'smokingPreference': 'Non-smoker',
@@ -77,7 +111,8 @@ class FlatmateController extends GetxController {
       'religion': 'Christian',
       'income': '₦450k - ₦600k/yr',
       'interests': ['Design', 'Art', 'Basketball'],
-      'bio': 'Creative architect who appreciates aesthetics and organization. Looking for a living space that allows for some creative expression.',
+      'bio':
+          'Creative architect who appreciates aesthetics and organization. Looking for a living space that allows for some creative expression.',
       'moveInDate': 'October 1',
       'preferredRent': '₦250k - ₦350k',
       'smokingPreference': 'Smoker (outdoors only)',
@@ -120,7 +155,8 @@ class FlatmateController extends GetxController {
   final recentMessages = <Map<String, dynamic>>[
     {
       'sender': 'Sarah Johnson',
-      'message': 'Hi! I saw we matched as potential roommates. Would love to chat!',
+      'message':
+          'Hi! I saw we matched as potential roommates. Would love to chat!',
       'time': '10:30 AM',
       'image': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
       'unread': true,
@@ -134,7 +170,8 @@ class FlatmateController extends GetxController {
     },
     {
       'sender': 'Emma Rodriguez',
-      'message': 'I have a viewing scheduled for that apartment tomorrow if you want to join.',
+      'message':
+          'I have a viewing scheduled for that apartment tomorrow if you want to join.',
       'time': 'Aug 7',
       'image': 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80',
       'unread': false,
