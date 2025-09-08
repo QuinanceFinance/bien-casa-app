@@ -99,7 +99,7 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
                     style: TextStyle(
                       color: isActive ? Colors.black : Colors.grey[600],
                       fontSize: 12,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       fontWeight: isActive ? FontWeight.w400 : FontWeight.w300,
                     ),
                   ),
@@ -182,7 +182,7 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
               Text(
                 'Check\nReadability',
                 style: TextStyle(
-                  fontFamily: 'Product Sans',
+                  fontFamily: 'ProductSans',
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal,
                   fontSize: 40,
@@ -194,7 +194,7 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
               Text(
                 'Make sure the information is seen clearly, with no blur or glare.',
                 style: TextStyle(
-                  fontFamily: 'Product Sans Light',
+                  fontFamily: 'ProductSans Light',
                   fontWeight: FontWeight.w300,
                   color: Color(0xff020202),
                   fontStyle: FontStyle.normal,
@@ -245,7 +245,7 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
                                 Text(
                                   'Tap to select an image',
                                   style: TextStyle(
-                                    fontFamily: 'Product Sans',
+                                    fontFamily: 'ProductSans',
                                     fontWeight: FontWeight.w400,
                                     fontStyle: FontStyle.normal,
                                     fontSize: 20,
@@ -281,7 +281,7 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 12,
-                                      fontFamily: 'Product Sans',
+                                      fontFamily: 'ProductSans',
                                     ),
                                   ),
                                 ],
@@ -312,7 +312,7 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
                       child: Text(
                         'Take Again',
                         style: TextStyle(
-                          fontFamily: 'Product Sans',
+                          fontFamily: 'ProductSans',
                           fontWeight: FontWeight.w400,
                           fontStyle: FontStyle.normal,
                           fontSize: 22,
@@ -342,7 +342,7 @@ class _CheckReadabilityScreenState extends State<CheckReadabilityScreen> {
                       child: Text(
                         'Submit',
                         style: TextStyle(
-                          fontFamily: 'Product Sans',
+                          fontFamily: 'ProductSans',
                           fontWeight: FontWeight.w400,
                           fontStyle: FontStyle.normal,
                           fontSize: 22,

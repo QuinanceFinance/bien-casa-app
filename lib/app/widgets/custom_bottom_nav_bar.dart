@@ -28,7 +28,7 @@ class CustomBottomNavBar extends StatelessWidget {
         showUnselectedLabels: true,
         selectedLabelStyle: const TextStyle(
           fontSize: 12,
-          fontFamily: 'Product Sans',
+          fontFamily: 'ProductSans',
         ),
         unselectedLabelStyle: const TextStyle(fontSize: 12),
         elevation: 0,

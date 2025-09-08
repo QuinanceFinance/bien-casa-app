@@ -60,7 +60,7 @@ class KYCSuccessScreen extends StatelessWidget {
                       Text(
                         "You're All Set To\nGo!",
                         style: TextStyle(
-                          fontFamily: 'Product Sans Black',
+                          fontFamily: 'ProductSans Black',
                           fontWeight: FontWeight.w900,
                           fontStyle: FontStyle.normal,
                           fontSize: 40,
@@ -73,7 +73,7 @@ class KYCSuccessScreen extends StatelessWidget {
                       Text(
                         'Congrats! your account is successfully created, \nyou can now find your ideal flat mate based on \nbudget, location, lifestyle preferences.',
                         style: TextStyle(
-                          fontFamily: 'Product Sans Light',
+                          fontFamily: 'ProductSans Light',
                           fontWeight: FontWeight.w300,
                           fontStyle: FontStyle.normal,
                           fontSize: 15,
@@ -96,7 +96,7 @@ class KYCSuccessScreen extends StatelessWidget {
                           child: Text(
                             'Take me in',
                             style: TextStyle(
-                              fontFamily: 'Product Sans',
+                              fontFamily: 'ProductSans',
                               fontWeight: FontWeight.w400,
                               fontStyle: FontStyle.normal,
                               fontSize: 22,

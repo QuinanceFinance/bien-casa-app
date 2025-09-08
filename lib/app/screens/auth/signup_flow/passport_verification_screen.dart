@@ -65,7 +65,7 @@ class _PassportVerificationScreenState
                 Text(
                   'Verify\nyour Identity',
                   style: TextStyle(
-                    fontFamily: 'Product Sans',
+                    fontFamily: 'ProductSans',
                     fontWeight: FontWeight.w400,
                     fontStyle: FontStyle.normal,
                     fontSize: 40,
@@ -79,7 +79,7 @@ class _PassportVerificationScreenState
                   'To verify your identity with your international \npassport, kindly enter your 8 digit passport \nnumber below.',
                   style: TextStyle(
                     fontSize: Get.width * 0.035,
-                    fontFamily: 'Product Sans',
+                    fontFamily: 'ProductSans',
                     fontWeight: FontWeight.w300,
                     color: Colors.black,
                   ),
@@ -108,7 +108,7 @@ class _PassportVerificationScreenState
                     counterText: '',
                     fillColor: Color(0xffF8F8F8),
                     hintStyle: TextStyle(
-                      fontFamily: 'Product Sans Light',
+                      fontFamily: 'ProductSans Light',
                       fontWeight: FontWeight.w300,
                       color: Color(0xFFBDBDBD),
                     ),
@@ -139,7 +139,7 @@ class _PassportVerificationScreenState
                             fontSize: 15,
                             color: Colors.black,
                             fontWeight: FontWeight.w300,
-                            fontFamily: 'Product Sans',
+                            fontFamily: 'ProductSans',
                           ),
                         ),
                         WidgetSpan(
@@ -150,7 +150,7 @@ class _PassportVerificationScreenState
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 17,
-                                fontFamily: 'Product Sans',
+                                fontFamily: 'ProductSans',
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -180,7 +180,7 @@ class _PassportVerificationScreenState
                       'Continue',
                       style: TextStyle(
                         fontSize: Get.width * 0.055,
-                        fontFamily: 'Product Sans',
+                        fontFamily: 'ProductSans',
                         color: Colors.white,
                       ),
                     ),
@@ -216,7 +216,7 @@ void _showPassportHelp() {
             text: TextSpan(
               style: TextStyle(
                 fontSize: Get.width * 0.035,
-                fontFamily: 'Product Sans',
+                fontFamily: 'ProductSans',
                 fontWeight: FontWeight.w300,
                 color: Colors.black,
                 height: 1.5,
@@ -239,7 +239,7 @@ void _showPassportHelp() {
             'Where to find your passport number',
             style: TextStyle(
               fontSize: Get.width * 0.045,
-              fontFamily: 'Product Sans',
+              fontFamily: 'ProductSans',
               fontWeight: FontWeight.bold,
               color: Colors.black,
             ),
@@ -253,7 +253,7 @@ void _showPassportHelp() {
                   '• Look at the data page of your passport\n• Find the field labeled "Passport No." or "Document No."\n• The number is typically in the format: A12345678\n• It may also appear at the bottom of the page in a machine-readable zone',
                   style: TextStyle(
                     fontSize: Get.width * 0.035,
-                    fontFamily: 'Product Sans',
+                    fontFamily: 'ProductSans',
                     fontWeight: FontWeight.w300,
                     color: Colors.black,
                     height: 1.5,
@@ -267,7 +267,7 @@ void _showPassportHelp() {
             'Important Notes',
             style: TextStyle(
               fontSize: Get.width * 0.045,
-              fontFamily: 'Product Sans',
+              fontFamily: 'ProductSans',
               fontWeight: FontWeight.bold,
               color: Colors.black,
             ),
@@ -281,7 +281,7 @@ void _showPassportHelp() {
                   '• The passport number is different from the personal number\n• Make sure to enter all characters exactly as they appear\n• The number remains the same throughout the validity of your passport\n• Keep your passport information confidential',
                   style: TextStyle(
                     fontSize: Get.width * 0.035,
-                    fontFamily: 'Product Sans',
+                    fontFamily: 'ProductSans',
                     fontWeight: FontWeight.w300,
                     color: Colors.black,
                     height: 1.5,
@@ -295,7 +295,7 @@ void _showPassportHelp() {
             'If you cannot locate your passport number or have any issues, please contact the Nigeria Immigration Service.',
             style: TextStyle(
               fontSize: Get.width * 0.035,
-              fontFamily: 'Product Sans',
+              fontFamily: 'ProductSans',
               fontWeight: FontWeight.w300,
               color: Colors.black,
               height: 1.5,
@@ -317,7 +317,7 @@ void _showPassportHelp() {
                 'Ok',
                 style: TextStyle(
                   fontSize: Get.width * 0.045,
-                  fontFamily: 'Product Sans',
+                  fontFamily: 'ProductSans',
                   color: Colors.white,
                 ),
               ),

@@ -3,11 +3,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../../widgets/custom_bottom_nav_bar.dart';
 import '../../controllers/user_home_controller.dart';
-import 'widgets/home/featured_property_card.dart';
-import 'widgets/home/horizontal_property_list.dart';
-import 'widgets/home/search_bar_widget.dart';
-import 'widgets/home/section_header.dart';
-import 'widgets/home/location_property_list.dart';
+import 'home/featured_property_card.dart';
+import 'home/horizontal_property_list.dart';
+import 'home/search_bar_widget.dart';
+import 'home/section_header.dart';
+import 'home/location_property_list.dart';
 
 class UserHome extends StatefulWidget {
   const UserHome({super.key});
@@ -44,7 +44,7 @@ class _UserHomeState extends State<UserHome> {
         title: const Text(
           'Explore',
           style: TextStyle(
-            fontFamily: 'Product Sans',
+            fontFamily: 'ProductSans',
             fontSize: 40,
             fontWeight: FontWeight.w400,
             fontStyle: FontStyle.normal,

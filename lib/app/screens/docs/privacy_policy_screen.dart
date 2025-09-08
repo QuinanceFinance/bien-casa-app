@@ -42,7 +42,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
                 'Privacy Policy',
                 style: TextStyle(
                   fontSize: Get.width * 0.10,
-                  fontFamily: 'Product Sans',
+                  fontFamily: 'ProductSans',
                   fontWeight: FontWeight.w900,
                   color: Colors.black,
                 ),
@@ -78,7 +78,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
                     'If you have questions about this Privacy Policy, please contact our support team.',
                     style: TextStyle(
                       fontSize: Get.width * 0.04,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       color: Colors.black54,
                       height: 1.5,
                     ),

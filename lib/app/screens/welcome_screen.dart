@@ -66,7 +66,7 @@ class WelcomeScreen extends StatelessWidget {
                               text: 'Welcome\nTo ',
                               style: TextStyle(
                                 fontSize: 40,
-                                fontFamily: 'Product Sans',
+                                fontFamily: 'ProductSans',
                                 fontWeight: FontWeight.w400,
                                 color: Colors.black,
                               ),
@@ -75,7 +75,7 @@ class WelcomeScreen extends StatelessWidget {
                               text: 'Bien Casa',
                               style: TextStyle(
                                 fontSize: 40,
-                                fontFamily: 'Product Sans-Black',
+                                fontFamily: 'ProductSans-Black',
                                 fontWeight: FontWeight.w900,
                                 fontStyle: FontStyle.normal,
                                 leadingDistribution:
@@ -116,7 +116,7 @@ class WelcomeScreen extends StatelessWidget {
                             'Sign up',
                             style: TextStyle(
                               fontSize: Get.width * 0.055,
-                              fontFamily: 'Product Sans',
+                              fontFamily: 'ProductSans',
                               color: Colors.white,
                             ),
                           ),
@@ -141,7 +141,7 @@ class WelcomeScreen extends StatelessWidget {
                             'Sign in',
                             style: TextStyle(
                               fontSize: Get.width * 0.055,
-                              fontFamily: 'Product Sans',
+                              fontFamily: 'ProductSans',
                               color: Colors.black,
                             ),
                           ),

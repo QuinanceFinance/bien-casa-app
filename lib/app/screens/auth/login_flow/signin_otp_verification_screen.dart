@@ -37,7 +37,7 @@ class SignInOtpVerificationScreen extends StatelessWidget {
                 'Enter\nyour OTP',
                 style: TextStyle(
                   fontSize: 40,
-                  fontFamily: 'Product Sans',
+                  fontFamily: 'ProductSans',
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
                   height: 1.2,
@@ -48,7 +48,7 @@ class SignInOtpVerificationScreen extends StatelessWidget {
                 text: TextSpan(
                   text: 'Kindly enter the OTP code sent to your phone ',
                   style: TextStyle(
-                    fontFamily: 'Product Sans',
+                    fontFamily: 'ProductSans',
                     fontSize: 15,
                     fontWeight: FontWeight.w300,
                     color: Colors.black,
@@ -133,7 +133,7 @@ class SignInOtpVerificationScreen extends StatelessWidget {
                       Text(
                         'I didn\'t receive a code?',
                         style: TextStyle(
-                          fontFamily: 'Product Sans Light',
+                          fontFamily: 'ProductSans Light',
                           fontWeight: FontWeight.w300,
                           fontStyle: FontStyle.normal,
                           fontSize: 15,
@@ -147,7 +147,7 @@ class SignInOtpVerificationScreen extends StatelessWidget {
                         'Resend code',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Product Sans',
+                          fontFamily: 'ProductSans',
                           fontSize: 17,
                         ),
                       ),

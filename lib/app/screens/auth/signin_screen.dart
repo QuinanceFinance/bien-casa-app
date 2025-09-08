@@ -63,7 +63,7 @@ class SignInScreen extends StatelessWidget {
                       'Welcome Back',
                       style: TextStyle(
                         fontSize: 40,
-                        fontFamily: 'Product Sans',
+                        fontFamily: 'ProductSans',
                         fontWeight: FontWeight.w900,
                         color: Colors.black,
                       ),
@@ -75,7 +75,7 @@ class SignInScreen extends StatelessWidget {
                       'to continue, kindly enter the phone number that\nis associated with your account',
                       style: TextStyle(
                         fontSize: 15,
-                        fontFamily: 'Product Sans Light',
+                        fontFamily: 'ProductSans Light',
                         fontWeight: FontWeight.w300,
                         color: Color(0xFF020202),
                       ),
@@ -100,7 +100,7 @@ class SignInScreen extends StatelessWidget {
                         contentPadding: EdgeInsets.symmetric(vertical: 20),
                         hintText: 'Phone number',
                         hintStyle: TextStyle(
-                          fontFamily: 'Product Sans Light',
+                          fontFamily: 'ProductSans Light',
                           fontWeight: FontWeight.w300,
                           color: Color(0xFFBDBDBD),
                         ),
@@ -163,7 +163,7 @@ class SignInScreen extends StatelessWidget {
                           fillColor: Color(0xFFF8F8F8),
                           hintText: 'Password',
                           hintStyle: TextStyle(
-                            fontFamily: 'Product Sans Light',
+                            fontFamily: 'ProductSans Light',
                             fontWeight: FontWeight.w300,
                             color: Color(0xFFBDBDBD),
                           ),
@@ -209,7 +209,7 @@ class SignInScreen extends StatelessWidget {
                           'Forgot Password?',
                           style: TextStyle(
                             color: Color(0xFF020202),
-                            fontFamily: 'Product Sans Light',
+                            fontFamily: 'ProductSans Light',
                             fontWeight: FontWeight.w300,
                             fontStyle: FontStyle.normal,
                             fontSize: 16,
@@ -247,7 +247,7 @@ class SignInScreen extends StatelessWidget {
                           'Continue',
                           style: TextStyle(
                             fontSize: Get.width * 0.055,
-                            fontFamily: 'Product Sans',
+                            fontFamily: 'ProductSans',
                             color: Colors.white,
                           ),
                         ),
@@ -268,7 +268,7 @@ class SignInScreen extends StatelessWidget {
                                 text: 'Don\'t have an account? ',
                                 style: TextStyle(
                                   color: Color(0xFF020202),
-                                  fontFamily: 'Product Sans Light',
+                                  fontFamily: 'ProductSans Light',
                                   fontWeight: FontWeight.w300,
                                   fontStyle: FontStyle.normal,
                                   fontSize: 16,
@@ -285,7 +285,7 @@ class SignInScreen extends StatelessWidget {
                                     'Sign up',
                                     style: TextStyle(
                                       color: Color(0xFF020202),
-                                      fontFamily: 'Product Sans-Black',
+                                      fontFamily: 'ProductSans-Black',
                                       fontWeight: FontWeight.w900,
                                       fontStyle: FontStyle.normal,
                                       fontSize: 16,
@@ -309,7 +309,7 @@ class SignInScreen extends StatelessWidget {
                         text: 'By using Bien Casa you agree to our ',
                         style: TextStyle(
                           fontSize: 15,
-                          fontFamily: 'Product Sans Light',
+                          fontFamily: 'ProductSans Light',
                           fontWeight: FontWeight.w300,
                           fontStyle: FontStyle.normal,
                           leadingDistribution:
@@ -320,7 +320,7 @@ class SignInScreen extends StatelessWidget {
                           TextSpan(
                             text: 'Term of Service',
                             style: TextStyle(
-                              fontFamily: 'Product Sans',
+                              fontFamily: 'ProductSans',
                               fontWeight: FontWeight.w700,
                               fontStyle: FontStyle.normal,
                               fontSize: 15,
@@ -339,7 +339,7 @@ class SignInScreen extends StatelessWidget {
                           TextSpan(
                             text: 'Privacy Policy',
                             style: TextStyle(
-                              fontFamily: 'Product Sans',
+                              fontFamily: 'ProductSans',
                               fontWeight: FontWeight.w700,
                               fontStyle: FontStyle.normal,
                               fontSize: 15,

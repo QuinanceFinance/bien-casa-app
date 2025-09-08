@@ -33,7 +33,7 @@ class KYCVerificationScreen extends StatelessWidget {
                     style: TextStyle(
                       color: isActive ? Colors.black : Colors.grey[600],
                       fontSize: 12,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       fontWeight: isActive ? FontWeight.w400 : FontWeight.w300,
                     ),
                   ),
@@ -159,7 +159,7 @@ class KYCVerificationScreen extends StatelessWidget {
                         text: TextSpan(
                           style: TextStyle(
                             fontSize: 15,
-                            fontFamily: 'Product Sans',
+                            fontFamily: 'ProductSans',
                             fontWeight: FontWeight.w300,
                             color: Colors.black,
                             height: 1.5,
@@ -188,7 +188,7 @@ class KYCVerificationScreen extends StatelessWidget {
                           Text(
                             "Most people finish this step under 2 minutes",
                             style: TextStyle(
-                              fontFamily: 'Product Sans Light',
+                              fontFamily: 'ProductSans Light',
                               color: Color(0xff6B6B6B),
                               fontSize: 15,
                               fontWeight: FontWeight.w300,
@@ -217,7 +217,7 @@ class KYCVerificationScreen extends StatelessWidget {
                             'Choose document',
                             style: TextStyle(
                               fontSize: 22,
-                              fontFamily: 'Product Sans',
+                              fontFamily: 'ProductSans',
                               fontWeight: FontWeight.w400,
                               color: Colors.white,
                               fontStyle: FontStyle.normal,
@@ -275,7 +275,7 @@ class KYCVerificationScreen extends StatelessWidget {
           style: TextStyle(
             color: isActive ? Colors.black : Colors.grey[600],
             fontSize: 12,
-            fontFamily: 'Product Sans',
+            fontFamily: 'ProductSans',
             fontWeight: isActive ? FontWeight.w600 : FontWeight.w400,
           ),
         ),
@@ -302,7 +302,7 @@ class KYCVerificationScreen extends StatelessWidget {
               'Choose\nDocument Type',
               style: TextStyle(
                 fontSize: 40,
-                fontFamily: 'Product Sans',
+                fontFamily: 'ProductSans',
                 fontWeight: FontWeight.w400,
                 fontStyle: FontStyle.normal,
                 leadingDistribution: TextLeadingDistribution.proportional,
@@ -314,7 +314,7 @@ class KYCVerificationScreen extends StatelessWidget {
             Text(
               'Make sure the document includes a clear picture of your face',
               style: TextStyle(
-                fontFamily: 'Product Sans Light',
+                fontFamily: 'ProductSans Light',
                 fontSize: 15,
                 fontWeight: FontWeight.w300,
                 fontStyle: FontStyle.normal,
@@ -390,7 +390,7 @@ class KYCVerificationScreen extends StatelessWidget {
                     title,
                     style: TextStyle(
                       fontSize: Get.width * 0.045,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -399,7 +399,7 @@ class KYCVerificationScreen extends StatelessWidget {
                     subtitle,
                     style: TextStyle(
                       fontSize: Get.width * 0.035,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       fontWeight: FontWeight.w300,
                       color: Colors.grey[600],
                     ),

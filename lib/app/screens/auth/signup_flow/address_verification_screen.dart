@@ -42,7 +42,7 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                     style: TextStyle(
                       color: isActive ? Colors.black : Colors.grey[600],
                       fontSize: 12,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       fontWeight: isActive ? FontWeight.w400 : FontWeight.w300,
                     ),
                   ),
@@ -171,7 +171,7 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                       Text(
                         "Let's verify\nyour address",
                         style: TextStyle(
-                          fontFamily: 'Product Sans Black',
+                          fontFamily: 'ProductSans Black',
                           fontWeight: FontWeight.w900,
                           fontStyle: FontStyle.normal,
                           fontSize: 40,
@@ -185,7 +185,7 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                       RichText(
                         text: TextSpan(
                           style: TextStyle(
-                            fontFamily: 'Product Sans Light',
+                            fontFamily: 'ProductSans Light',
                             fontWeight: FontWeight.w300,
                             fontStyle: FontStyle.normal,
                             fontSize: 15,
@@ -200,7 +200,7 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                             TextSpan(
                               text: 'Utility bill  |  Bank statement',
                               style: TextStyle(
-                                fontFamily: 'Product Sans',
+                                fontFamily: 'ProductSans',
                                 fontWeight: FontWeight.w700,
                                 fontStyle: FontStyle.normal,
                                 fontSize: 15,
@@ -223,7 +223,7 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                           Text(
                             "Most people finish this step under 1 minute",
                             style: TextStyle(
-                              fontFamily: 'Product Sans Light',
+                              fontFamily: 'ProductSans Light',
                               fontWeight: FontWeight.w300,
                               fontStyle: FontStyle.normal,
                               fontSize: 15.0,
@@ -330,7 +330,7 @@ class _AddressVerificationScreenState extends State<AddressVerificationScreen> {
                                   : Text(
                                     'Verify your address',
                                     style: TextStyle(
-                                      fontFamily: 'Product Sans',
+                                      fontFamily: 'ProductSans',
                                       fontWeight: FontWeight.w400,
                                       fontStyle: FontStyle.normal,
                                       fontSize: 22,

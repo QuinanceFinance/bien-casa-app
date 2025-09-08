@@ -47,7 +47,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                 'Forgot Password',
                 style: TextStyle(
                   fontSize: Get.width * 0.10,
-                  fontFamily: 'Product Sans',
+                  fontFamily: 'ProductSans',
                   fontWeight: FontWeight.w900,
                   color: Colors.black,
                 ),
@@ -59,7 +59,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                 'Enter your phone number to reset your password',
                 style: TextStyle(
                   fontSize: Get.width * 0.045,
-                  fontFamily: 'Product Sans',
+                  fontFamily: 'ProductSans',
                   color: Colors.black54,
                 ),
               ),
@@ -115,7 +115,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                     'Send OTP',
                     style: TextStyle(
                       fontSize: Get.width * 0.055,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       color: Colors.white,
                     ),
                   ),

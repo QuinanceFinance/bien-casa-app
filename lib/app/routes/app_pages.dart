@@ -20,16 +20,19 @@ import '../screens/auth/signup_flow/nin_password_screen.dart';
 import '../screens/auth/signup_flow/check_readability_screen.dart';
 import '../screens/auth/signup_flow/check_quality_screen.dart';
 import '../screens/auth/signup_flow/address_verification_screen.dart';
-import '../screens/user/widgets/home/search/search_screen.dart';
+import '../screens/user/home/search/search_screen.dart';
 // import '../screens/user/widgets/home/property/featured_properties_screen.dart';
-import '../screens/user/widgets/home/property/recently_added_screen.dart';
-import '../screens/user/widgets/home/property/location_properties_screen.dart';
-import '../screens/user/widgets/home/property/property_detail_screen.dart';
+import '../screens/user/home/property/recently_added_screen.dart';
+import '../screens/user/home/property/location_properties_screen.dart';
+import '../screens/user/home/property/property_detail_screen.dart';
 import '../screens/auth/signup_flow/selfie_screen.dart';
 import '../screens/auth/signup_flow/map_address_screen.dart';
-import '../screens/user/map_screen.dart';
+import '../screens/user/home/map_screen.dart';
 import '../screens/user/flatmate_screen.dart';
-import '../screens/user/widgets/flatmate/home/_pages/match_detail_screen.dart';
+import '../screens/user/flatmate/home/_pages/match_detail_screen.dart';
+import '../screens/user/flatmate/home/_pages/flatmate_detail_screen.dart';
+import '../screens/user/flatmate/home/_pages/add_flatmate_page.dart';
+import '../screens/user/flatmate/home/_pages/flat_detail_page.dart';
 import '../bindings/welcome_binding.dart';
 import '../bindings/onboarding_binding.dart';
 import '../bindings/user_home_binding.dart';
@@ -185,9 +188,39 @@ class AppPages {
       binding: FlatmateBinding(),
       transition: Transition.rightToLeft,
     ),
+    // FLATMATE_DETAIL route is defined below with full argument handling
+    GetPage(
+      name: AppRoutes.ADD_FLATMATE,
+      page: () => const AddFlatmatePage(),
+      binding: FlatmateBinding(),
+      transition: Transition.rightToLeft,
+    ),
     GetPage(
       name: AppRoutes.MATCH_DETAIL,
       page: () => MatchDetailScreen(initialData: Get.arguments),
+      transition: Transition.rightToLeft,
+    ),
+    GetPage(
+      name: AppRoutes.FLATMATE_DETAIL,
+      page: () {
+        // Handle both old and new argument formats
+        bool isMyFlatmate = false;
+        if (Get.arguments is Map<String, dynamic> && 
+            Get.arguments.containsKey('myFlatmate')) {
+          // Safely handle the boolean value which might be null
+          final myFlatmateValue = Get.arguments['myFlatmate'];
+          if (myFlatmateValue is bool) {
+            isMyFlatmate = myFlatmateValue;
+          }
+        }
+        return FlatmateDetailScreen(myFlatmate: isMyFlatmate);
+      },
+      transition: Transition.rightToLeft,
+    ),
+    GetPage(
+      name: AppRoutes.FLAT_DETAIL,
+      page: () => const FlatDetailPage(),
+      binding: FlatmateBinding(),
       transition: Transition.rightToLeft,
     ),
   ];

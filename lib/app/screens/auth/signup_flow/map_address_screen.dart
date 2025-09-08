@@ -273,7 +273,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                         const Text(
                           'Update your address',
                           style: TextStyle(
-                            fontFamily: 'Product Sans',
+                            fontFamily: 'ProductSans',
                             fontWeight: FontWeight.w700,
                             fontStyle: FontStyle.normal,
                             fontSize: 18.0,
@@ -292,7 +292,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                         'Skip',
                         style: TextStyle(
                           color: Colors.black,
-                          fontFamily: 'Product Sans',
+                          fontFamily: 'ProductSans',
                           fontWeight: FontWeight.w400,
                           fontStyle: FontStyle.normal,
                           fontSize: 15,
@@ -308,7 +308,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   child: RichText(
                     text: TextSpan(
                       style: TextStyle(
-                        fontFamily: 'Product Sans Light',
+                        fontFamily: 'ProductSans Light',
                         fontWeight: FontWeight.w300,
                         fontStyle: FontStyle.normal,
                         fontSize: 15,
@@ -362,7 +362,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                       hint: Text(
                         'Utility bill',
                         style: TextStyle(
-                          fontFamily: 'Product Sans Light',
+                          fontFamily: 'ProductSans Light',
                           fontWeight: FontWeight.w300,
                           fontStyle: FontStyle.normal,
                           fontSize: 18,
@@ -379,7 +379,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                             child: Text(
                               'Utility bill',
                               style: TextStyle(
-                                fontFamily: 'Product Sans Light',
+                                fontFamily: 'ProductSans Light',
                                 fontWeight: FontWeight.w300,
                                 fontStyle: FontStyle.normal,
                                 fontSize: 18,
@@ -397,7 +397,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                             child: Text(
                               'Bank statement',
                               style: TextStyle(
-                                fontFamily: 'Product Sans Light',
+                                fontFamily: 'ProductSans Light',
                                 fontWeight: FontWeight.w300,
                                 fontStyle: FontStyle.normal,
                                 fontSize: 18,
@@ -456,7 +456,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                       'This is also my mailing address',
                       style: TextStyle(
                         color: Colors.black,
-                        fontFamily: 'Product Sans Light',
+                        fontFamily: 'ProductSans Light',
                         fontWeight: FontWeight.w300,
                         fontStyle: FontStyle.normal,
                         fontSize: 15,
@@ -484,7 +484,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                       'Submit',
                       style: TextStyle(
                         color: Colors.white,
-                        fontFamily: 'Product Sans',
+                        fontFamily: 'ProductSans',
                         fontWeight: FontWeight.w400,
                         fontStyle: FontStyle.normal,
                         fontSize: 22,
@@ -549,7 +549,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                           TextSpan(
                             text: 'Update your address',
                             style: TextStyle(
-                              fontFamily: 'Product Sans',
+                              fontFamily: 'ProductSans',
                               fontWeight: FontWeight.w700,
                               color: Colors.black,
                               fontStyle: FontStyle.normal,
@@ -570,7 +570,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                         'Skip',
                         style: TextStyle(
                           color: Colors.black,
-                          fontFamily: 'Product Sans',
+                          fontFamily: 'ProductSans',
                           fontSize: 15,
                           fontWeight: FontWeight.w400,
                           fontStyle: FontStyle.normal,
@@ -587,7 +587,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   decoration: InputDecoration(
                     hintText: 'House No.',
                     hintStyle: TextStyle(
-                      fontFamily: 'Product Sans Light',
+                      fontFamily: 'ProductSans Light',
                       fontWeight: FontWeight.w300,
                       fontStyle: FontStyle.normal,
                       fontSize: 18,
@@ -621,7 +621,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   decoration: InputDecoration(
                     hintText: 'Street Name',
                     hintStyle: TextStyle(
-                      fontFamily: 'Product Sans Light',
+                      fontFamily: 'ProductSans Light',
                       fontWeight: FontWeight.w300,
                       fontStyle: FontStyle.normal,
                       fontSize: 18,
@@ -655,7 +655,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   decoration: InputDecoration(
                     hintText: 'City/Town',
                     hintStyle: TextStyle(
-                      fontFamily: 'Product Sans Light',
+                      fontFamily: 'ProductSans Light',
                       fontWeight: FontWeight.w300,
                       fontStyle: FontStyle.normal,
                       fontSize: 18,
@@ -689,7 +689,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   decoration: InputDecoration(
                     hintText: 'State',
                     hintStyle: TextStyle(
-                      fontFamily: 'Product Sans Light',
+                      fontFamily: 'ProductSans Light',
                       fontWeight: FontWeight.w300,
                       fontStyle: FontStyle.normal,
                       fontSize: 18,
@@ -723,7 +723,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   decoration: InputDecoration(
                     hintText: 'Postal Code',
                     hintStyle: TextStyle(
-                      fontFamily: 'Product Sans Light',
+                      fontFamily: 'ProductSans Light',
                       fontWeight: FontWeight.w300,
                       fontStyle: FontStyle.normal,
                       fontSize: 18,
@@ -757,7 +757,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                   decoration: InputDecoration(
                     hintText: 'Country',
                     hintStyle: TextStyle(
-                      fontFamily: 'Product Sans Light',
+                      fontFamily: 'ProductSans Light',
                       fontWeight: FontWeight.w300,
                       fontStyle: FontStyle.normal,
                       fontSize: 18,
@@ -794,7 +794,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                       'This is also my mailing address',
                       style: TextStyle(
                         color: Colors.black,
-                        fontFamily: 'Product Sans Light',
+                        fontFamily: 'ProductSans Light',
                         fontWeight: FontWeight.w300,
                         fontStyle: FontStyle.normal,
                         fontSize: 15,
@@ -823,7 +823,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                       'Continue',
                       style: TextStyle(
                         color: Colors.white,
-                        fontFamily: 'Product Sans',
+                        fontFamily: 'ProductSans',
                         fontWeight: FontWeight.w400,
                         fontStyle: FontStyle.normal,
                         fontSize: 22,
@@ -903,7 +903,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                     style: TextStyle(
                       color: isActive ? Colors.black : Colors.grey[600],
                       fontSize: 12,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       fontWeight: isActive ? FontWeight.w400 : FontWeight.w300,
                     ),
                   ),
@@ -1057,7 +1057,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                           Text(
                             'Enter full address',
                             style: TextStyle(
-                              fontFamily: 'Product Sans',
+                              fontFamily: 'ProductSans',
                               fontWeight: FontWeight.w700,
                               fontStyle: FontStyle.normal,
                               fontSize: 18,
@@ -1073,7 +1073,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                             child: Text(
                               'Skip',
                               style: TextStyle(
-                                fontFamily: 'Product Sans',
+                                fontFamily: 'ProductSans',
                                 fontWeight: FontWeight.w400,
                                 fontStyle: FontStyle.normal,
                                 fontSize: 15,
@@ -1093,7 +1093,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                             horizontal: 20,
                           ),
                           hintStyle: TextStyle(
-                            fontFamily: 'Product Sans Light',
+                            fontFamily: 'ProductSans Light',
                             fontWeight: FontWeight.w300,
                             fontStyle: FontStyle.normal,
                             fontSize: 18,
@@ -1150,7 +1150,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                                                     'Start typing to see recommendations',
                                                 hintStyle: TextStyle(
                                                   fontFamily:
-                                                      'Product Sans Light',
+                                                      'ProductSans Light',
                                                   fontWeight: FontWeight.w300,
                                                   fontStyle: FontStyle.normal,
                                                   fontSize: 18,
@@ -1234,7 +1234,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                                                       color: Color(0xff6B6B6B),
                                                       fontSize: 16,
                                                       fontFamily:
-                                                          'Product Sans Light',
+                                                          'ProductSans Light',
                                                       fontWeight:
                                                           FontWeight.w300,
                                                       fontStyle:
@@ -1263,7 +1263,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                         Text(
                           "Start typing to see recommendations",
                           style: TextStyle(
-                            fontFamily: 'Product Sans Light',
+                            fontFamily: 'ProductSans Light',
                             fontSize: 15,
                             fontWeight: FontWeight.w300,
                             color: Color(0xff6B6B6B),
@@ -1288,7 +1288,7 @@ class _MapAddressScreenState extends State<MapAddressScreen> {
                                   style: TextStyle(
                                     color: Color(0xff6B6B6B),
                                     fontSize: 16,
-                                    fontFamily: 'Product Sans',
+                                    fontFamily: 'ProductSans',
                                     fontWeight: FontWeight.w300,
                                   ),
                                 ),

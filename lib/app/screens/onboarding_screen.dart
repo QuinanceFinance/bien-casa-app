@@ -48,7 +48,7 @@ class OnboardingScreen extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 15,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -107,7 +107,7 @@ class OnboardingPage extends StatelessWidget {
                       item.title,
                       style: TextStyle(
                         fontSize: 40,
-                        fontFamily: 'Product Sans-Black',
+                        fontFamily: 'ProductSans-Black',
                         fontWeight: FontWeight.w900,
                         fontStyle: FontStyle.normal,
                         height: 1,
@@ -119,7 +119,7 @@ class OnboardingPage extends StatelessWidget {
                     Text(
                       item.description,
                       style: TextStyle(
-                        fontFamily: 'Product Sans Light',
+                        fontFamily: 'ProductSans Light',
                         fontSize: 15,
                         fontWeight: FontWeight.w300,
                         fontStyle: FontStyle.normal,

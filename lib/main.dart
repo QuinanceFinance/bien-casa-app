@@ -16,11 +16,11 @@ class MyApp extends StatelessWidget {
       title: 'BienCasa',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'Product Sans',
-        textTheme: const TextTheme().apply(fontFamily: 'Product Sans'),
+        fontFamily: 'ProductSans',
+        textTheme: const TextTheme().apply(fontFamily: 'ProductSans'),
       ),
-        initialRoute: AppRoutes.SPLASH,
-      getPages: AppPages.routes, 
+      initialRoute: AppRoutes.SPLASH,
+      getPages: AppPages.routes,
     );
   }
 }

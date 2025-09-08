@@ -76,7 +76,7 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
                     style: TextStyle(
                       color: isActive ? Colors.black : Colors.grey[600],
                       fontSize: 12,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       fontWeight: isActive ? FontWeight.w400 : FontWeight.w300,
                     ),
                   ),
@@ -177,7 +177,7 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
               Text(
                 'Check Quality',
                 style: TextStyle(
-                  fontFamily: 'Product Sans',
+                  fontFamily: 'ProductSans',
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal,
                   fontSize: 40,
@@ -189,7 +189,7 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
               Text(
                 'Make sure the information is seen clearly, with no blur or glare.',
                 style: TextStyle(
-                  fontFamily: 'Product Sans Light',
+                  fontFamily: 'ProductSans Light',
                   fontWeight: FontWeight.w300,
                   color: Color(0xff020202),
                   fontStyle: FontStyle.normal,
@@ -247,7 +247,7 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 12,
-                                    fontFamily: 'Product Sans',
+                                    fontFamily: 'ProductSans',
                                   ),
                                 ),
                               ],
@@ -277,7 +277,7 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
                       child: Text(
                         'Take Again',
                         style: TextStyle(
-                          fontFamily: 'Product Sans',
+                          fontFamily: 'ProductSans',
                           fontWeight: FontWeight.w400,
                           fontStyle: FontStyle.normal,
                           fontSize: 22,
@@ -305,7 +305,7 @@ class _CheckQualityScreenState extends State<CheckQualityScreen> {
                       child: Text(
                         'Submit',
                         style: TextStyle(
-                          fontFamily: 'Product Sans',
+                          fontFamily: 'ProductSans',
                           fontWeight: FontWeight.w400,
                           fontStyle: FontStyle.normal,
                           fontSize: 22,

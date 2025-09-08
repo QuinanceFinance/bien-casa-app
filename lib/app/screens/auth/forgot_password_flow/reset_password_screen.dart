@@ -47,7 +47,7 @@ class ResetPasswordScreen extends StatelessWidget {
                 'Reset Password',
                 style: TextStyle(
                   fontSize: Get.width * 0.10,
-                  fontFamily: 'Product Sans',
+                  fontFamily: 'ProductSans',
                   fontWeight: FontWeight.w900,
                   color: Colors.black,
                 ),
@@ -59,7 +59,7 @@ class ResetPasswordScreen extends StatelessWidget {
                 'Create a new password for your account',
                 style: TextStyle(
                   fontSize: Get.width * 0.045,
-                  fontFamily: 'Product Sans',
+                  fontFamily: 'ProductSans',
                   color: Colors.black54,
                 ),
               ),
@@ -154,7 +154,7 @@ class ResetPasswordScreen extends StatelessWidget {
                     'Reset Password',
                     style: TextStyle(
                       fontSize: Get.width * 0.055,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       color: Colors.white,
                     ),
                   ),

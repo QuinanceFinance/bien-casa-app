@@ -66,7 +66,7 @@ class _NINPasswordScreenState extends State<NINPasswordScreen> {
                 Text(
                   'Enter your\nPassword',
                   style: TextStyle(
-                    fontFamily: 'Product Sans',
+                    fontFamily: 'ProductSans',
                     fontWeight: FontWeight.w400,
                     fontStyle: FontStyle.normal,
                     fontSize: 40,
@@ -79,7 +79,7 @@ class _NINPasswordScreenState extends State<NINPasswordScreen> {
                 Text(
                   'Kindly enter your preferred password below to \nproceed with identity verification',
                   style: TextStyle(
-                    fontFamily: 'Product Sans Light',
+                    fontFamily: 'ProductSans Light',
                     fontWeight: FontWeight.w300,
                     fontStyle: FontStyle.normal,
                     fontSize: 15,
@@ -110,7 +110,7 @@ class _NINPasswordScreenState extends State<NINPasswordScreen> {
                       decoration: InputDecoration(
                         hintText: 'Enter password',
                         hintStyle: TextStyle(
-                          fontFamily: 'Product Sans Light',
+                          fontFamily: 'ProductSans Light',
                           fontWeight: FontWeight.w300,
                           fontStyle: FontStyle.normal,
                           fontSize: 18,
@@ -149,7 +149,7 @@ class _NINPasswordScreenState extends State<NINPasswordScreen> {
                   'Must be at least 8 characters',
                   style: TextStyle(
                     color: Color(0xffBDBDBD),
-                    fontFamily: 'Product Sans Light',
+                    fontFamily: 'ProductSans Light',
                     fontWeight: FontWeight.w300,
                     fontStyle: FontStyle.normal,
                     fontSize: 15,
@@ -171,7 +171,7 @@ class _NINPasswordScreenState extends State<NINPasswordScreen> {
                       decoration: InputDecoration(
                         hintText: 'Re-enter password',
                         hintStyle: TextStyle(
-                          fontFamily: 'Product Sans Light',
+                          fontFamily: 'ProductSans Light',
                           fontWeight: FontWeight.w300,
                           fontStyle: FontStyle.normal,
                           fontSize: 18,
@@ -210,7 +210,7 @@ class _NINPasswordScreenState extends State<NINPasswordScreen> {
                   'Both passwords must match',
                   style: TextStyle(
                     color: Color(0xffBDBDBD),
-                    fontFamily: 'Product Sans Light',
+                    fontFamily: 'ProductSans Light',
                     fontWeight: FontWeight.w300,
                     fontStyle: FontStyle.normal,
                     fontSize: 15,
@@ -238,7 +238,7 @@ class _NINPasswordScreenState extends State<NINPasswordScreen> {
                       child: Text(
                         'Continue',
                         style: TextStyle(
-                          fontFamily: 'Product Sans',
+                          fontFamily: 'ProductSans',
                           fontWeight: FontWeight.w400,
                           fontStyle: FontStyle.normal,
                           fontSize: 22,
@@ -278,7 +278,7 @@ class _NINPasswordScreenState extends State<NINPasswordScreen> {
             value,
             style: TextStyle(
               color: Colors.black,
-              fontFamily: 'Product Sans Light',
+              fontFamily: 'ProductSans Light',
               fontWeight: FontWeight.w300,
               fontStyle: FontStyle.normal,
               fontSize: 18.0,

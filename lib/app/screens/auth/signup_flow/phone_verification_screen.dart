@@ -57,7 +57,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                 'Sign up',
                 style: TextStyle(
                   fontSize: 40,
-                  fontFamily: 'Product Sans',
+                  fontFamily: 'ProductSans',
                   fontWeight: FontWeight.w900,
                   color: Colors.black,
                   height: 1.2,
@@ -72,7 +72,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w300,
-                  fontFamily: 'Product Sans',
+                  fontFamily: 'ProductSans',
                   color: Colors.black,
                   height: 1.5,
                 ),
@@ -119,7 +119,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                             '+234',
                             style: TextStyle(
                               fontSize: 18,
-                              fontFamily: 'Product Sans',
+                              fontFamily: 'ProductSans',
                               color: Colors.black,
                             ),
                           ),
@@ -134,7 +134,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                         keyboardType: TextInputType.phone,
                         style: TextStyle(
                           fontSize: 18,
-                          fontFamily: 'Product Sans',
+                          fontFamily: 'ProductSans',
                         ),
                         decoration: InputDecoration(
                           border: InputBorder.none,
@@ -142,7 +142,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                           hintStyle: TextStyle(
                             color: Colors.black26,
                             fontSize: 18,
-                            fontFamily: 'Product Sans',
+                            fontFamily: 'ProductSans',
                           ),
                           contentPadding:
                               isSmallScreen
@@ -189,7 +189,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                                 'Enter Referral Code',
                                 style: TextStyle(
                                   fontSize: 24,
-                                  fontFamily: 'Product Sans',
+                                  fontFamily: 'ProductSans',
                                   fontWeight: FontWeight.w900,
                                   color: Colors.black,
                                 ),
@@ -208,7 +208,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                                   controller: controller.referralCodeController,
                                   style: TextStyle(
                                     fontSize: 18,
-                                    fontFamily: 'Product Sans',
+                                    fontFamily: 'ProductSans',
                                   ),
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
@@ -216,7 +216,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                                     hintStyle: TextStyle(
                                       color: Colors.black26,
                                       fontSize: 18,
-                                      fontFamily: 'Product Sans',
+                                      fontFamily: 'ProductSans',
                                     ),
                                   ),
                                   onChanged:
@@ -248,7 +248,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                                       'Submit',
                                       style: TextStyle(
                                         fontSize: 20,
-                                        fontFamily: 'Product Sans',
+                                        fontFamily: 'ProductSans',
                                         fontWeight: FontWeight.w400,
                                         color: Colors.white,
                                       ),
@@ -272,7 +272,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: isSmallScreen ? 16 : 18,
                           fontWeight: FontWeight.w300,
-                          fontFamily: 'Product Sans',
+                          fontFamily: 'ProductSans',
                           color:
                               controller.isReferralCodeValid.value
                                   ? Color(0xff29BCA2)
@@ -315,7 +315,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                       'Continue',
                       style: TextStyle(
                         fontSize: isSmallScreen ? 20 : 22,
-                        fontFamily: 'Product Sans',
+                        fontFamily: 'ProductSans',
                         fontWeight: FontWeight.w400,
                         color: Colors.white,
                       ),
@@ -337,7 +337,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                           isSmallScreen
                               ? screenWidth * 0.035
                               : screenWidth * 0.04,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       fontWeight: FontWeight.w300,
                       color: Colors.black,
                     ),
@@ -351,7 +351,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                             isSmallScreen
                                 ? screenWidth * 0.035
                                 : screenWidth * 0.04,
-                        fontFamily: 'Product Sans',
+                        fontFamily: 'ProductSans',
                         fontWeight: FontWeight.w900,
                         color: Colors.black,
                       ),
@@ -367,7 +367,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                   text: 'By using Bien Casa you agree to our ',
                   style: TextStyle(
                     fontSize: 15,
-                    fontFamily: 'Product Sans Light',
+                    fontFamily: 'ProductSans Light',
                     fontWeight: FontWeight.w300,
                     fontStyle: FontStyle.normal,
                     leadingDistribution: TextLeadingDistribution.proportional,
@@ -377,7 +377,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                     TextSpan(
                       text: 'Term of Service',
                       style: TextStyle(
-                        fontFamily: 'Product Sans',
+                        fontFamily: 'ProductSans',
                         fontWeight: FontWeight.w700,
                         fontStyle: FontStyle.normal,
                         fontSize: 15,
@@ -395,7 +395,7 @@ class PhoneVerificationScreen extends StatelessWidget {
                     TextSpan(
                       text: 'Privacy Policy',
                       style: TextStyle(
-                        fontFamily: 'Product Sans',
+                        fontFamily: 'ProductSans',
                         fontWeight: FontWeight.w700,
                         fontStyle: FontStyle.normal,
                         fontSize: 15,

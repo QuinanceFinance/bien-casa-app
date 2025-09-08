@@ -57,7 +57,7 @@ class SelfieScreen extends StatelessWidget {
                     style: TextStyle(
                       color: isActive ? Colors.black : Colors.grey[600],
                       fontSize: 12,
-                      fontFamily: 'Product Sans',
+                      fontFamily: 'ProductSans',
                       fontWeight: isActive ? FontWeight.w400 : FontWeight.w300,
                     ),
                   ),
@@ -245,7 +245,7 @@ class SelfieScreen extends StatelessWidget {
                           child: Text(
                             'Take a selfie',
                             style: TextStyle(
-                              fontFamily: 'Product Sans',
+                              fontFamily: 'ProductSans',
                               fontWeight: FontWeight.w400,
                               fontStyle: FontStyle.normal,
                               color: Colors.white,
